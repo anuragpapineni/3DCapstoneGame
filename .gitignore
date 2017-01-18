@@ -24,11 +24,11 @@ obj/
 ehthumbs.db
 Thumbs.db
 
-/3DCapstoneGame/[Ll]ibrary/
-/3DCapstoneGame/[Tt]emp/
-/3DCapstoneGame/[Oo]bj/
-/3DCapstoneGame/[Bb]uild/
-/3DCapstoneGame/[Bb]uilds/
+3DCapstoneGame/[Ll]ibrary/
+3DCapstoneGame/[Tt]emp/
+3DCapstoneGame/[Oo]bj/
+3DCapstoneGame/[Bb]uild/
+3DCapstoneGame/[Bb]uilds/
 #/3DCapstoneGame/Assets/AssetStoreTools*
 
 # Unity3D generated meta files
