@@ -1,0 +1,10 @@
+diff a/TwoWizards/Source/TwoWizards/TwoWizardsCharacter.cpp b/TwoWizards/Source/TwoWizards/TwoWizardsCharacter.cpp	(rejected hunks)
+@@ -23,6 +23,8 @@
+ 	BaseLookUpRate = 45.f;
+ 
+ 	// Create a CameraComponent	
++	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
++	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
+ 	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
+ 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
+ 
