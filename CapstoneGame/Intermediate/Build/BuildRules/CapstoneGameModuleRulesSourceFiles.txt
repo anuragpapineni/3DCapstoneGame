@@ -1,0 +1,3 @@
+C:\Users\anura_000\Documents\Unreal Projects\CapstoneGame\Source\CapstoneGame\CapstoneGame.Build.cs
+C:\Users\anura_000\Documents\Unreal Projects\CapstoneGame\Source\CapstoneGame.Target.cs
+C:\Users\anura_000\Documents\Unreal Projects\CapstoneGame\Source\CapstoneGameEditor.Target.cs
