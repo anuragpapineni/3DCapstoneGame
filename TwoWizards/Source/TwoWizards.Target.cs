@@ -1,13 +1,13 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class CapstoneGameEditorTarget : TargetRules
+public class TwoWizardsTarget : TargetRules
 {
-	public CapstoneGameEditorTarget(TargetInfo Target)
+	public TwoWizardsTarget(TargetInfo Target)
 	{
-		Type = TargetType.Editor;
+		Type = TargetType.Game;
 	}
 
 	//
@@ -20,6 +20,6 @@ public class CapstoneGameEditorTarget : TargetRules
 		ref List<string> OutExtraModuleNames
 		)
 	{
-		OutExtraModuleNames.AddRange( new string[] { "CapstoneGame" } );
+		OutExtraModuleNames.Add("TwoWizards");
 	}
 }

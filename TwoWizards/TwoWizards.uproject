@@ -5,12 +5,9 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "CapstoneGame",
+			"Name": "TwoWizards",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
 		}
 	]
 }
