@@ -3,6 +3,7 @@
 #include "TwoWizards.h"
 #include "TwoWizardsCharacter.h"
 #include "TwoWizardsProjectile.h"
+#include "Spell.h"
 #include "Animation/AnimInstance.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
@@ -85,6 +86,9 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATwoWizardsCharacter::DoFire);
 
+
+	PlayerInputComponent->BindAction("Spell1", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell1);
+
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
@@ -100,9 +104,6 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ATwoWizardsCharacter::LookUpAtRate);
 }
 
-void ATwoWizardsCharacter::DoFire() {
-	PerformTask(ETaskEnum::Fire);
-}
 
 void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
 {
@@ -131,6 +132,26 @@ void ATwoWizardsCharacter::ClientPerformTask_Implementation(ETaskEnum::Type NewT
 
 bool ATwoWizardsCharacter::ClientPerformTask_Validate(ETaskEnum::Type NewTask) {
 	return true;
+}
+
+void ATwoWizardsCharacter::DoFire() {
+	PerformTask(ETaskEnum::Fire);
+}
+
+void ATwoWizardsCharacter::DoSpell1() {
+	PerformTask(ETaskEnum::Spell1);
+}
+
+void ATwoWizardsCharacter::DoSpell2() {
+	PerformTask(ETaskEnum::Spell2);
+}
+
+void ATwoWizardsCharacter::DoSpell3() {
+	PerformTask(ETaskEnum::Spell3);
+}
+
+void ATwoWizardsCharacter::DoSpell4() {
+	PerformTask(ETaskEnum::Spell4);
 }
 
 void ATwoWizardsCharacter::OnFire()
@@ -173,6 +194,48 @@ void ATwoWizardsCharacter::OnFire()
 	}
 }
 
+
+void ATwoWizardsCharacter::OnSpell()
+{
+	// try and fire a projectile
+	if (Spell1 != NULL)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			const FRotator SpawnRotation = GetControlRotation();
+			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+
+			//Set Spawn Collision Handling Override
+			FActorSpawnParameters ActorSpawnParams;
+			//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+			// spawn the projectile at the muzzle
+			World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+
+		}
+	}
+
+	// try and play the sound if specified
+	if (FireSound != NULL)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+
+	// try and play a firing animation if specified
+	if (FireAnimation != NULL)
+	{
+		// Get the animation object for the arms mesh
+		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
+		if (AnimInstance != NULL)
+		{
+			AnimInstance->Montage_Play(FireAnimation, 1.f);
+		}
+	}
+}
+
+
 void ATwoWizardsCharacter::MoveForward(float Value)
 {
 	if (Value != 0.0f)
@@ -209,6 +272,9 @@ void ATwoWizardsCharacter::OnRep_Task()
 			break;
 		case(ETaskEnum::Fire):
 			OnFire();
+			break;
+		case(ETaskEnum::Spell1):
+			OnSpell();
 			break;
 
 	}

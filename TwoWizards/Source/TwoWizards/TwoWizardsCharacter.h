@@ -61,6 +61,23 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
 	TSubclassOf<class ATwoWizardsProjectile> ProjectileClass;
 
+	/** Spell 1 */
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class ASpell> Spell1;
+
+	/** Spell 2 */
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class ASpell> Spell2;
+
+	/** Spell 3 */
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class ASpell> Spell3;
+
+	/** Spell 4 */
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class ASpell> Spell4;
+
+
 	/** Sound to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	class USoundBase* FireSound;
@@ -84,6 +101,15 @@ protected:
 
 	/** Fires a projectile. */
 	void OnFire();
+
+	/* Spell Callbacks */
+	void DoSpell1();
+	void DoSpell2();
+	void DoSpell3();
+	void DoSpell4();
+
+	/** Fires a spell. */
+	void OnSpell();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
