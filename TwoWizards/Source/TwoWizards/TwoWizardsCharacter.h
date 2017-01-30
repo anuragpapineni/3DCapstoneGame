@@ -77,6 +77,9 @@ protected:
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerPerformTask(ETaskEnum::Type NewTask);
 
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
+		void ClientPerformTask(ETaskEnum::Type NewTask);
+
 	void DoFire();
 
 	/** Fires a projectile. */

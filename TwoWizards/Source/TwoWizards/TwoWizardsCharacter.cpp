@@ -108,9 +108,11 @@ void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
 {
 	if (GetNetMode() == NM_Client) {
 		ServerPerformTask(NewTask);
+		return;
 	}
-	Task = NewTask;
-	OnRep_Task();
+	else {
+		ClientPerformTask(NewTask);
+	}
 
 }
 
@@ -121,6 +123,16 @@ void ATwoWizardsCharacter::ServerPerformTask_Implementation(ETaskEnum::Type NewT
 bool ATwoWizardsCharacter::ServerPerformTask_Validate(ETaskEnum::Type NewTask) {
 	return true;
 }
+
+void ATwoWizardsCharacter::ClientPerformTask_Implementation(ETaskEnum::Type NewTask) {
+	Task = NewTask;
+	OnRep_Task();
+}
+
+bool ATwoWizardsCharacter::ClientPerformTask_Validate(ETaskEnum::Type NewTask) {
+	return true;
+}
+
 void ATwoWizardsCharacter::OnFire()
 {
 	// try and fire a projectile
