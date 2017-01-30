@@ -7,6 +7,7 @@
 #include "GameFramework/InputSettings.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "MotionControllerComponent.h"
+#include "UnrealNetwork.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -68,6 +69,12 @@ void ATwoWizardsCharacter::BeginPlay()
 
 }
 
+void ATwoWizardsCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> & OutLifetimeProps) const{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATwoWizardsCharacter, Task);
+
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 
@@ -76,7 +83,7 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATwoWizardsCharacter::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATwoWizardsCharacter::DoFire);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -93,6 +100,27 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ATwoWizardsCharacter::LookUpAtRate);
 }
 
+void ATwoWizardsCharacter::DoFire() {
+	PerformTask(ETaskEnum::Fire);
+}
+
+void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
+{
+	if (GetNetMode() == NM_Client) {
+		ServerPerformTask(NewTask);
+	}
+	Task = NewTask;
+	OnRep_Task();
+
+}
+
+void ATwoWizardsCharacter::ServerPerformTask_Implementation(ETaskEnum::Type NewTask) {
+	PerformTask(NewTask);
+}
+
+bool ATwoWizardsCharacter::ServerPerformTask_Validate(ETaskEnum::Type NewTask) {
+	return true;
+}
 void ATwoWizardsCharacter::OnFire()
 {
 	// try and fire a projectile
@@ -161,4 +189,15 @@ void ATwoWizardsCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+void ATwoWizardsCharacter::OnRep_Task()
+{
+	switch (Task) {
+		case (ETaskEnum::None):
+			break;
+		case(ETaskEnum::Fire):
+			OnFire();
+			break;
+
+	}
 }

@@ -5,6 +5,17 @@
 
 class UInputComponent;
 
+UENUM()
+namespace ETaskEnum {
+	enum Type {
+		None,
+		Fire,
+		Spell1,
+		Spell2,
+		Spell3,
+		Spell4
+	};
+}
 UCLASS(config=Game)
 class ATwoWizardsCharacter : public ACharacter
 {
@@ -25,6 +36,9 @@ class ATwoWizardsCharacter : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
+
+	UPROPERTY(ReplicatedUsing = OnRep_Task)
+		TEnumAsByte<ETaskEnum::Type> Task;
 
 public:
 	ATwoWizardsCharacter();
@@ -55,17 +69,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
 
-	/** Whether to use motion controller location for aiming. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-	uint32 bUsingMotionControllers : 1;
 
 protected:
 	
+	void PerformTask(ETaskEnum::Type NewTask);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerPerformTask(ETaskEnum::Type NewTask);
+
+	void DoFire();
+
 	/** Fires a projectile. */
 	void OnFire();
-
-	/** Resets HMD orientation and position in VR. */
-	void OnResetVR();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -93,6 +108,9 @@ protected:
 
 public:
 	/** Returns Mesh1P subobject **/
+
+	UFUNCTION()
+		void OnRep_Task();
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }

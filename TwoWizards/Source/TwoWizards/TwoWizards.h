@@ -3,7 +3,7 @@
 #ifndef __TWOWIZARDS_H__
 #define __TWOWIZARDS_H__
 
-#include "EngineMinimal.h"
+#include "Engine.h"
 
 
 #endif
