@@ -4,6 +4,7 @@
 #include "TwoWizardsCharacter.h"
 #include "TwoWizardsProjectile.h"
 #include "Spell.h"
+#include "GameController.h"
 #include "Animation/AnimInstance.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
@@ -63,6 +64,14 @@ void ATwoWizardsCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	if (GetNetMode() == NM_Client) {
+		AGameController::instance->player2 = this;
+	}
+	else {
+		AGameController::instance->player1 = this;
+	}
+
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
