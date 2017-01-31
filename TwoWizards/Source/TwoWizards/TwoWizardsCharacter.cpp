@@ -116,12 +116,12 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
 {
-
+	Task = NewTask;
 	if (GetNetMode() == NM_Client) {
+		OnRep_Task();
 		ServerPerformTask(NewTask);
 		return;
 	}
-	Task = NewTask;
 	OnRep_Task();
 
 }
@@ -206,6 +206,18 @@ void ATwoWizardsCharacter::OnFire()
 
 void ATwoWizardsCharacter::OnSpell()
 {
+	if (GetNetMode() == NM_Client) {
+		// try and play a firing animation if specified
+		if (FireAnimation != NULL)
+		{
+			// Get the animation object for the arms mesh
+			UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
+			if (AnimInstance != NULL)
+			{
+				AnimInstance->Montage_Play(FireAnimation, 1.f);
+			}
+		}
+	}
 	UWorld* const World = GetWorld();
 	if (World != NULL)
 	{
@@ -232,22 +244,6 @@ void ATwoWizardsCharacter::OnSpell()
 
 	}
 
-	// try and play the sound if specified
-	if (FireSound != NULL)
-	{
-		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-	}
-
-	// try and play a firing animation if specified
-	if (FireAnimation != NULL)
-	{
-		// Get the animation object for the arms mesh
-		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
-		if (AnimInstance != NULL)
-		{
-			AnimInstance->Montage_Play(FireAnimation, 1.f);
-		}
-	}
 }
 
 
@@ -286,6 +282,7 @@ void ATwoWizardsCharacter::OnRep_Task()
 		case (ETaskEnum::None):
 			break;
 		case(ETaskEnum::Fire):
+
 			OnSpell();
 			break;
 		case(ETaskEnum::Spell1):

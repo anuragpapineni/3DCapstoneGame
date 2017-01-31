@@ -11,6 +11,9 @@
 AEnemy::AEnemy(const FObjectInitializer& ObjectInitializer)
 	:Super(ObjectInitializer)
 {
+	bReplicateMovement = true;
+	bReplicates = true;
+	bAlwaysRelevant = true;
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 

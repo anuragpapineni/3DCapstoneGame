@@ -44,6 +44,7 @@ ASpell::ASpell()
 void ASpell::BeginPlay()
 {
 	Super::BeginPlay();
+	UGameplayStatics::PlaySoundAtLocation(this, CastSound, GetActorLocation());
 	
 }
 
