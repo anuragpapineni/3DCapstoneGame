@@ -52,6 +52,7 @@ void ATwoWizardsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 	}
+
 	if (OtherActor->IsA(AEnemy::StaticClass()))
 	{
 		((AEnemy*)OtherActor)->health--;
@@ -59,6 +60,6 @@ void ATwoWizardsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 		{
 			OtherActor->Destroy();
 		}
-		Destroy();
 	}
+	Destroy();
 }

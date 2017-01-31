@@ -3,6 +3,8 @@
 #pragma once
 #include "TwoWizardsCharacter.h"
 #include "GameFramework/Actor.h"
+#include "Enemy.h"
+#include <vector>
 #include "GameController.generated.h"
 
 UCLASS()
@@ -19,6 +21,8 @@ public:
 	ATwoWizardsCharacter* player1;
 
 	ATwoWizardsCharacter* player2;
+
+	std::vector<AEnemy*> enemies;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

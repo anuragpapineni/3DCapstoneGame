@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TwoWizards.h"
+#include "TwoWizardsCharacter.h"
 #include "Spell.h"
 
 
