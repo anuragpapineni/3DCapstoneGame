@@ -3,6 +3,7 @@
 #include "TwoWizards.h"
 #include "TwoWizardsProjectile.h"
 #include "Enemy.h"
+#include "GameController.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "TwoWizardsCharacter.h"
 
@@ -58,7 +59,7 @@ void ATwoWizardsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 		((AEnemy*)OtherActor)->health--;
 		if (((AEnemy*)OtherActor)->health <= 0)
 		{
-			OtherActor->Destroy();
+			AGameController::DisableActor(OtherActor);
 		}
 	}
 	Destroy();

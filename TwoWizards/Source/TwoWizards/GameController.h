@@ -18,6 +18,10 @@ public:
 
 	static AGameController* instance;
 
+	static void DisableActor(AActor* actor);
+
+	static void EnableActor(AActor* actor);
+
 	ATwoWizardsCharacter* player1;
 
 	ATwoWizardsCharacter* player2;

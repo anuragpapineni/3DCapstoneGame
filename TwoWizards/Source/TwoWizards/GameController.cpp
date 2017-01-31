@@ -13,6 +13,21 @@ AGameController::AGameController()
 	AGameController::instance = this;
 }
 
+void AGameController::DisableActor(AActor * actor)
+{
+	actor->SetActorHiddenInGame(true);
+	actor->SetActorEnableCollision(false);
+	actor->PrimaryActorTick.bCanEverTick = false;
+}
+
+
+void AGameController::EnableActor(AActor * actor)
+{
+	actor->SetActorHiddenInGame(false);
+	actor->SetActorEnableCollision(true);
+	actor->PrimaryActorTick.bCanEverTick = true;
+}
+
 // Called when the game starts or when spawned
 void AGameController::BeginPlay()
 {
@@ -23,6 +38,7 @@ void AGameController::BeginPlay()
 void AGameController::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
-
+	for (AEnemy* enemy : enemies) {
+	}
 }
 
