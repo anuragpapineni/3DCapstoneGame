@@ -61,6 +61,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
 	TSubclassOf<class ATwoWizardsProjectile> ProjectileClass;
 
+
+	float Cooldown0;
+	float Cooldown1;
+	float Cooldown2;
+	float Cooldown3;
+	float Cooldown4;
+
 	/** Spell 0: Spammable Spell*/
 	UPROPERTY(EditDefaultsOnly)
 		TSubclassOf<class ASpell> Spell0;
@@ -141,6 +148,10 @@ protected:
 
 public:
 	/** Returns Mesh1P subobject **/
+
+
+	// Called every frame
+	virtual void Tick(float DeltaSeconds) override;
 
 	UFUNCTION()
 		void OnRep_Task();

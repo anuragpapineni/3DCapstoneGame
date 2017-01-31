@@ -18,6 +18,9 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 ATwoWizardsCharacter::ATwoWizardsCharacter()
 {
+
+	PrimaryActorTick.bCanEverTick = true;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
@@ -58,6 +61,17 @@ ATwoWizardsCharacter::ATwoWizardsCharacter()
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
 	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
 
+}
+
+// Called every frame
+void ATwoWizardsCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Cooldown0 -= DeltaTime;
+	Cooldown1 -= DeltaTime;
+	Cooldown2 -= DeltaTime;
+	Cooldown3 -= DeltaTime;
+	Cooldown4 -= DeltaTime;
 }
 
 void ATwoWizardsCharacter::BeginPlay()
@@ -230,14 +244,17 @@ void ATwoWizardsCharacter::OnSpell()
 		//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
 		// spawn the projectile at the muzzle
+		ASpell* spell;
 		switch (Task) {
 			case (ETaskEnum::None):
 				break;
 			case(ETaskEnum::Fire):
-				World->SpawnActor<ASpell>(Spell0, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				spell = World->SpawnActor<ASpell>(Spell0, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown0 = spell->cooldown;
 				break;
 			case(ETaskEnum::Spell1):
-				World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				spell = World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown1 = spell->cooldown;
 				break;
 
 		}
@@ -282,11 +299,12 @@ void ATwoWizardsCharacter::OnRep_Task()
 		case (ETaskEnum::None):
 			break;
 		case(ETaskEnum::Fire):
-
-			OnSpell();
+			if (Cooldown0<=0)
+				OnSpell();
 			break;
 		case(ETaskEnum::Spell1):
-			OnSpell();
+			if (Cooldown1 <= 0)
+				OnSpell();
 			break;
 
 	}
