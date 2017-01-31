@@ -2,23 +2,35 @@
 
 #include "TwoWizards.h"
 #include "TwoWizardsProjectile.h"
+#include "Enemy.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "TwoWizardsCharacter.h"
 
-ATwoWizardsProjectile::ATwoWizardsProjectile() 
+#define COLLISION_ENEMY ECollisionChannel::ECC_GameTraceChannel3
+#define COLLISION_ALLY ECollisionChannel::ECC_GameTraceChannel2
+
+ATwoWizardsProjectile::ATwoWizardsProjectile()
 {
-
 	// Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
 	CollisionComp->InitSphereRadius(5.0f);
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
 	CollisionComp->OnComponentHit.AddDynamic(this, &ATwoWizardsProjectile::OnHit);		// set up a notification for when this component hits something blocking
 
-	// Players can't walk on it
+																						// Players can't walk on it
 	CollisionComp->SetWalkableSlopeOverride(FWalkableSlopeOverride(WalkableSlope_Unwalkable, 0.f));
 	CollisionComp->CanCharacterStepUpOn = ECB_No;
 
 	// Set as root component
 	RootComponent = CollisionComp;
+
+	CollisionComp->BodyInstance.SetCollisionProfileName("ally");
+	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);
+
+	CollisionComp->SetCollisionObjectType(COLLISION_ALLY);
+	CollisionComp->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
+	CollisionComp->SetCollisionResponseToChannel(COLLISION_ALLY, ECollisionResponse::ECR_Ignore);
+	CollisionComp->SetCollisionResponseToChannel(COLLISION_ENEMY, ECollisionResponse::ECR_Block);
 
 	// Use a ProjectileMovementComponent to govern this projectile's movement
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileComp"));
@@ -26,7 +38,7 @@ ATwoWizardsProjectile::ATwoWizardsProjectile()
 	ProjectileMovement->InitialSpeed = 3000.f;
 	ProjectileMovement->MaxSpeed = 3000.f;
 	ProjectileMovement->bRotationFollowsVelocity = true;
-	ProjectileMovement->bShouldBounce = true;
+	ProjectileMovement->bShouldBounce = false;
 	ProjectileMovement->ProjectileGravityScale = 0.0f;
 
 	// Die after 3 seconds by default
@@ -39,7 +51,14 @@ void ATwoWizardsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-
+	}
+	if (OtherActor->IsA(AEnemy::StaticClass()))
+	{
+		((AEnemy*)OtherActor)->health--;
+		if (((AEnemy*)OtherActor)->health <= 0)
+		{
+			OtherActor->Destroy();
+		}
 		Destroy();
 	}
 }
