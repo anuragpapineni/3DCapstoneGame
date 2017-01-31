@@ -61,6 +61,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
 	TSubclassOf<class ATwoWizardsProjectile> ProjectileClass;
 
+	/** Spell 0: Spammable Spell*/
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class ASpell> Spell0;
+
 	/** Spell 1 */
 	UPROPERTY(EditDefaultsOnly)
 		TSubclassOf<class ASpell> Spell1;

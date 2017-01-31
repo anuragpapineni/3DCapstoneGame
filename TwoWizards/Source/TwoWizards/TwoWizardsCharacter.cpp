@@ -206,24 +206,30 @@ void ATwoWizardsCharacter::OnFire()
 
 void ATwoWizardsCharacter::OnSpell()
 {
-	// try and fire a projectile
-	if (Spell1 != NULL)
+	UWorld* const World = GetWorld();
+	if (World != NULL)
 	{
-		UWorld* const World = GetWorld();
-		if (World != NULL)
-		{
-			const FRotator SpawnRotation = GetControlRotation();
-			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+		const FRotator SpawnRotation = GetControlRotation();
+		// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+		const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
 
-			//Set Spawn Collision Handling Override
-			FActorSpawnParameters ActorSpawnParams;
-			//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+		//Set Spawn Collision Handling Override
+		FActorSpawnParameters ActorSpawnParams;
+		//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
-			// spawn the projectile at the muzzle
-			World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+		// spawn the projectile at the muzzle
+		switch (Task) {
+			case (ETaskEnum::None):
+				break;
+			case(ETaskEnum::Fire):
+				World->SpawnActor<ASpell>(Spell0, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				break;
+			case(ETaskEnum::Spell1):
+				World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				break;
 
 		}
+
 	}
 
 	// try and play the sound if specified
@@ -280,7 +286,7 @@ void ATwoWizardsCharacter::OnRep_Task()
 		case (ETaskEnum::None):
 			break;
 		case(ETaskEnum::Fire):
-			OnFire();
+			OnSpell();
 			break;
 		case(ETaskEnum::Spell1):
 			OnSpell();
