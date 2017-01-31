@@ -116,13 +116,13 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
 {
+
 	if (GetNetMode() == NM_Client) {
 		ServerPerformTask(NewTask);
 		return;
 	}
-	else {
-		ClientPerformTask(NewTask);
-	}
+	Task = NewTask;
+	OnRep_Task();
 
 }
 
