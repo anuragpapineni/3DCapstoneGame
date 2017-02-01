@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TwoWizards.h"
-#include "TwoWizardsCharacter.h"
 #include "Spell.h"
 #include "Enemy.h"
 #include "GameController.h"
@@ -12,6 +11,7 @@ ASpell::ASpell()
 	bReplicateMovement = true;
 	bReplicates = true;
 	bAlwaysRelevant = true;
+	element = Element::None;
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	// Use a sphere as a simple collision representation
@@ -60,7 +60,12 @@ void ASpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveC
 
 	if (OtherActor->IsA(AEnemy::StaticClass()))
 	{
-		((AEnemy*)OtherActor)->health--;
+		AEnemy* enemy = ((AEnemy*)OtherActor);
+		if (enemy->lastHitBy != 0 && (element - 1 == enemy->lastHitBy || (element == Element::Type::Fire&&enemy->lastHitBy == Element::Type::Earth)))
+			enemy->health -= 2;
+		else
+			enemy->health -= 1;
+		enemy->lastHitBy = element;
 		if (((AEnemy*)OtherActor)->health <= 0)
 		{
 			AGameController::DisableActor(OtherActor);

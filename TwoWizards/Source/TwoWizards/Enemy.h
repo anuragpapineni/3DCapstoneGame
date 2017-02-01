@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "Spell.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"
 
@@ -20,6 +21,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
 		UStaticMeshComponent* EnemyMesh;
 
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		TEnumAsByte<Element::Type> lastHitBy;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -1,9 +1,20 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include "TwoWizardsCharacter.h"
 #include "GameFramework/Actor.h"
 #include "Spell.generated.h"
+
+UENUM()
+namespace Element {
+	enum Type {
+		None,
+		Fire,
+		Water,
+		Ice,
+		Earth
+	};
+}
 
 UCLASS()
 class TWOWIZARDS_API ASpell : public AActor
@@ -19,15 +30,20 @@ class TWOWIZARDS_API ASpell : public AActor
 
 
 public:	
+
+	ATwoWizardsCharacter* caster;
+
 	/** Sound to play while traveling */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		class USoundBase* CastSound;
 
+	/** Sound to play while traveling */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TEnumAsByte<Element::Type> element;
+
 	/** cooldown */
 	UPROPERTY(EditAnywhere)
 		float cooldown;
-
-	ATwoWizardsCharacter* caster;
 
 	/** Sound to play on impact */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
