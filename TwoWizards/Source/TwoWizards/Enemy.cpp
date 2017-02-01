@@ -56,7 +56,7 @@ void AEnemy::BeginPlay()
 void AEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	this->SetActorLocation(GetActorLocation() + FVector(0, DeltaTime*100, 0));
+	//this->SetActorLocation(GetActorLocation() + FVector(0, DeltaTime*100, 0));
 }
 
 
