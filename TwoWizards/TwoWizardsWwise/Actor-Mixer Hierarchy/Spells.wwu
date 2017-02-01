@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Spells" ID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Spell_Emitter" ID="{11200095-8F19-4D51-BFBA-EC3FEF5C1E02}" ShortID="546388603" Type="SoundFX">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E3E77D28-98CD-469E-9D95-A43C32B8A9B4}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="75"/>
+											<Property Name="Min" Type="Real64" Value="-75"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Spell Emitter Audio-St" ID="{CD020FE0-6BD5-4F46-AD38-53081C0B3467}" ShortID="382681100">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Spell Emitter Audio-St.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Spell Emitter Audio-St" ID="{CD020FE0-6BD5-4F46-AD38-53081C0B3467}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

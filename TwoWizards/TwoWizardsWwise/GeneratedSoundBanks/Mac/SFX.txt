@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2523036220	Evt_Footsteps			\Character\Evt_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	165794388	Happy_Grass Step 4	C:\Users\mitch_000\Documents\WwiseProjects\Two Wizards\.cache\Mac\SFX\Happy_Grass Step 4_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 4		66368
+	357535431	Happy_Grass Step 2	C:\Users\mitch_000\Documents\WwiseProjects\Two Wizards\.cache\Mac\SFX\Happy_Grass Step 2_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 2		66368
+	395700950	Happy_Grass Step 3	C:\Users\mitch_000\Documents\WwiseProjects\Two Wizards\.cache\Mac\SFX\Happy_Grass Step 3_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 3		66368
+	495475995	Happy_Grass Step 5	C:\Users\mitch_000\Documents\WwiseProjects\Two Wizards\.cache\Mac\SFX\Happy_Grass Step 5_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 5		66368
+	702333855	Happy_Grass Step	C:\Users\mitch_000\Documents\WwiseProjects\Two Wizards\.cache\Mac\SFX\Happy_Grass Step_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step		66368
+

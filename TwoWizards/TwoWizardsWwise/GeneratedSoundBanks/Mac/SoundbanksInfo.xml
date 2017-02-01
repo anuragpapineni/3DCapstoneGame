@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2385628198" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Footsteps</ObjectPath>
+			<ShortName>Footsteps</ShortName>
+			<Path>Footsteps.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2523036220" Name="Evt_Footsteps" ObjectPath="\Events\Character\Evt_Footsteps"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="165794388" Language="SFX">
+					<ShortName>Happy_Grass Step 4.wav</ShortName>
+					<Path>SFX\Happy_Grass Step 4_9E69E797.wem</Path>
+				</File>
+				<File Id="357535431" Language="SFX">
+					<ShortName>Happy_Grass Step 2.wav</ShortName>
+					<Path>SFX\Happy_Grass Step 2_9E69E797.wem</Path>
+				</File>
+				<File Id="395700950" Language="SFX">
+					<ShortName>Happy_Grass Step 3.wav</ShortName>
+					<Path>SFX\Happy_Grass Step 3_9E69E797.wem</Path>
+				</File>
+				<File Id="495475995" Language="SFX">
+					<ShortName>Happy_Grass Step 5.wav</ShortName>
+					<Path>SFX\Happy_Grass Step 5_9E69E797.wem</Path>
+				</File>
+				<File Id="702333855" Language="SFX">
+					<ShortName>Happy_Grass Step.wav</ShortName>
+					<Path>SFX\Happy_Grass Step_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4160437992" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Spells</ObjectPath>
+			<ShortName>Spells</ShortName>
+			<Path>Spells.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3583747966" Name="Spell_Emitter" ObjectPath="\Events\Default Work Unit\Spell_Emitter"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="382681100" Language="SFX">
+					<ShortName>SFX_Spell Emitter Audio-St.wav</ShortName>
+					<Path>SFX\SFX_Spell Emitter Audio-St_4B8CC0C5.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

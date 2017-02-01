@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="72">
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Character.wwu" DateLow="4076235828" DateHigh="30571539"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4076140603" DateHigh="30571539"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="2847593937" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="2848689715" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Spells.wwu" DateLow="2021901227" DateHigh="30571548"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Attenuations\Default Work Unit.wwu" DateLow="1799509223" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Audio Devices\Default Work Unit.wwu" DateLow="1799449171" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Control Surface Sessions\Default Work Unit.wwu" DateLow="1799229015" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Conversion Settings\Default Work Unit.wwu" DateLow="1799168981" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2853388197" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1799569261" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Default Work Unit.wwu" DateLow="1798873768" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory Auro Headphone.wwu" DateLow="2876775216" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory Effects.wwu" DateLow="2842150152" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Box Modeler.wwu" DateLow="690653474" DateHigh="30571364"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Delay.wwu" DateLow="2862047704" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Dynamics.wwu" DateLow="2873838226" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Filters.wwu" DateLow="2863860220" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="2877060418" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2872162730" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2861362123" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Effects\Factory McDSP Effects.wwu" DateLow="1908084366" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Events\Character.wwu" DateLow="1785114214" DateHigh="30571526"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Events\Default Work Unit.wwu" DateLow="958539542" DateHigh="30571558"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Game Parameters\Default Work Unit.wwu" DateLow="1798798907" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="2839071965" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1799058903" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3918286121" DateHigh="30571417"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Mixing Sessions\Default Work Unit.wwu" DateLow="1799108930" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Modulators\Default Work Unit.wwu" DateLow="1799284067" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Presets\Default Work Unit.wwu" DateLow="1798938814" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Queries\Default Work Unit.wwu" DateLow="1798988845" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Queries\Factory Queries.wwu" DateLow="2850503506" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\SoundBanks\Default Work Unit.wwu" DateLow="2361230483" DateHigh="30571541"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1799334103" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\States\Character.wwu" DateLow="3478720002" DateHigh="30571369"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\States\Default Work Unit.wwu" DateLow="1798743671" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Switches\Default Work Unit.wwu" DateLow="1798500242" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Triggers\Default Work Unit.wwu" DateLow="1799399140" DateHigh="30571361"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Two_Wizards.mitch_000.wsettings" DateLow="1027688238" DateHigh="30571587"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Two_Wizards.wproj" DateLow="1798064929" DateHigh="30571361"/>
+</ValidationCache>

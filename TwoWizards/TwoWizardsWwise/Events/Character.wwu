@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{53C031A8-D5B6-4F06-BB1A-D8D8169BDC64}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Character" ID="{53C031A8-D5B6-4F06-BB1A-D8D8169BDC64}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Evt_Footsteps" ID="{C0942A1D-E280-4E6D-B44B-9965D531DAD9}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5863F1E6-2222-4224-833A-06AE1241FEFD}" ShortID="759007891" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{FDD896FC-5384-4B9C-B627-5A0A9582EDD6}" Global="false">
+									<ObjectRef Name="Cloth" ID="{1DE97514-B879-4776-94DD-2D61EF0A16E7}" WorkUnitID="{00ADAF3A-001D-414F-A95A-2651CF27D49E}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{DA518BC2-C554-4A44-BCF1-B5173E2EF585}" ShortID="89145764" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{61800662-E020-411B-908D-13AAFC3F2D02}" Global="false">
+									<ObjectRef Name="Footsteps" ID="{F62E8C1B-958A-4A15-98BF-291894B7A311}" WorkUnitID="{00ADAF3A-001D-414F-A95A-2651CF27D49E}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

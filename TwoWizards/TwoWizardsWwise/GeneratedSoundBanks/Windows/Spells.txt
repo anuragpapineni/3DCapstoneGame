@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3583747966	Spell_Emitter			\Default Work Unit\Spell_Emitter	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	382681100	Spell_Emitter	C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\.cache\Windows\SFX\SFX_Spell Emitter Audio-St_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Spells\Spell_Emitter		1411264
+

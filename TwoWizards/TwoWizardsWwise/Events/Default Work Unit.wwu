@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Spell_Emitter" ID="{7387C8A3-6DD8-4BBC-AF2B-4188F0F0F851}">
+					<ChildrenList>
+						<Action Name="Play" ID="{4998DD11-05B1-4F9E-9A0E-4A1563127B5C}" ShortID="371459400" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{81D46FD8-EAC2-49C1-BE53-A958BE68558E}" Global="false">
+									<ObjectRef Name="Spell_Emitter" ID="{11200095-8F19-4D51-BFBA-EC3FEF5C1E02}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{81971F5D-0762-4078-AACB-FED1963EAAAA}" ShortID="117627232" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{3F9ED3E5-28A6-4F23-BE32-1DFE8166BC23}" Global="false">
+									<ObjectRef Name="Spell_Emitter" ID="{11200095-8F19-4D51-BFBA-EC3FEF5C1E02}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

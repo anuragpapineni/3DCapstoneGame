@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EE18F8ED-E8F6-49C5-9F32-3BBB7949639B}" SchemaVersion="72">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{EE18F8ED-E8F6-49C5-9F32-3BBB7949639B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Footsteps" ID="{8F404320-5518-44E9-9CBC-127D827D57BC}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Evt_Footsteps" ID="{C0942A1D-E280-4E6D-B44B-9965D531DAD9}" WorkUnitID="{53C031A8-D5B6-4F06-BB1A-D8D8169BDC64}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Spells" ID="{C7779BBD-CB60-438A-B361-1247C13BEE36}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Spell_Emitter" ID="{7387C8A3-6DD8-4BBC-AF2B-4188F0F0F851}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
