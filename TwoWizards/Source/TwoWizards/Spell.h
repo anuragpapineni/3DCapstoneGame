@@ -21,7 +21,13 @@ class TWOWIZARDS_API ASpell : public AActor
 public:	
 	/** Sound to play while traveling */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class USoundBase* TravelSound;
+		class USoundBase* CastSound;
+
+	/** cooldown */
+	UPROPERTY(EditAnywhere)
+		float cooldown;
+
+	ATwoWizardsCharacter* caster;
 
 	/** Sound to play on impact */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)

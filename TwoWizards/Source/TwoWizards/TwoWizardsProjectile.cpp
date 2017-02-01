@@ -3,6 +3,7 @@
 #include "TwoWizards.h"
 #include "TwoWizardsProjectile.h"
 #include "Enemy.h"
+#include "GameController.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "TwoWizardsCharacter.h"
 
@@ -11,6 +12,9 @@
 
 ATwoWizardsProjectile::ATwoWizardsProjectile()
 {
+	bReplicateMovement = true;
+	bReplicates = true;
+	bAlwaysRelevant = true;
 	// Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
 	CollisionComp->InitSphereRadius(5.0f);
@@ -52,13 +56,14 @@ void ATwoWizardsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 	}
+
 	if (OtherActor->IsA(AEnemy::StaticClass()))
 	{
 		((AEnemy*)OtherActor)->health--;
 		if (((AEnemy*)OtherActor)->health <= 0)
 		{
-			OtherActor->Destroy();
+			AGameController::DisableActor(OtherActor);
 		}
-		Destroy();
 	}
+	Destroy();
 }

@@ -3,7 +3,7 @@
 #include "TwoWizards.h"
 #include "Enemy.h"
 #include "TwoWizardsProjectile.h"
-
+#include "GameController.h"
 
 #define COLLISION_ENEMY ECollisionChannel::ECC_GameTraceChannel2
 #define COLLISION_ALLY ECollisionChannel::ECC_GameTraceChannel3
@@ -11,6 +11,9 @@
 AEnemy::AEnemy(const FObjectInitializer& ObjectInitializer)
 	:Super(ObjectInitializer)
 {
+	bReplicateMovement = true;
+	bReplicates = true;
+	bAlwaysRelevant = true;
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -45,13 +48,15 @@ void AEnemy::BeginPlay()
 	CollisionComp->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
 	CollisionComp->SetCollisionResponseToChannel(COLLISION_ENEMY, ECollisionResponse::ECR_Ignore);
 	CollisionComp->SetCollisionResponseToChannel(COLLISION_ALLY, ECollisionResponse::ECR_Block);
+
+	AGameController::instance->enemies.push_back(this);
 }
 
 // Called every frame
 void AEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	//this->SetActorLocation(GetActorLocation() + FVector(0, DeltaTime*100, 0));
 }
 
 

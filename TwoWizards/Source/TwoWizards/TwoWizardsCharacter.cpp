@@ -18,6 +18,9 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 ATwoWizardsCharacter::ATwoWizardsCharacter()
 {
+
+	PrimaryActorTick.bCanEverTick = true;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
@@ -58,6 +61,17 @@ ATwoWizardsCharacter::ATwoWizardsCharacter()
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
 	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
 
+}
+
+// Called every frame
+void ATwoWizardsCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Cooldown0 -= DeltaTime;
+	Cooldown1 -= DeltaTime;
+	Cooldown2 -= DeltaTime;
+	Cooldown3 -= DeltaTime;
+	Cooldown4 -= DeltaTime;
 }
 
 void ATwoWizardsCharacter::BeginPlay()
@@ -116,13 +130,13 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 void ATwoWizardsCharacter::PerformTask(ETaskEnum::Type NewTask)
 {
+	Task = NewTask;
 	if (GetNetMode() == NM_Client) {
+		OnRep_Task();
 		ServerPerformTask(NewTask);
 		return;
 	}
-	else {
-		ClientPerformTask(NewTask);
-	}
+	OnRep_Task();
 
 }
 
@@ -206,42 +220,47 @@ void ATwoWizardsCharacter::OnFire()
 
 void ATwoWizardsCharacter::OnSpell()
 {
-	// try and fire a projectile
-	if (Spell1 != NULL)
-	{
-		UWorld* const World = GetWorld();
-		if (World != NULL)
+	if (GetNetMode() == NM_Client) {
+		// try and play a firing animation if specified
+		if (FireAnimation != NULL)
 		{
-			const FRotator SpawnRotation = GetControlRotation();
-			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
-
-			//Set Spawn Collision Handling Override
-			FActorSpawnParameters ActorSpawnParams;
-			//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
-
-			// spawn the projectile at the muzzle
-			World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
-
+			// Get the animation object for the arms mesh
+			UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
+			if (AnimInstance != NULL)
+			{
+				AnimInstance->Montage_Play(FireAnimation, 1.f);
+			}
 		}
 	}
-
-	// try and play the sound if specified
-	if (FireSound != NULL)
+	UWorld* const World = GetWorld();
+	if (World != NULL)
 	{
-		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-	}
+		const FRotator SpawnRotation = GetControlRotation();
+		// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+		const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
 
-	// try and play a firing animation if specified
-	if (FireAnimation != NULL)
-	{
-		// Get the animation object for the arms mesh
-		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
-		if (AnimInstance != NULL)
-		{
-			AnimInstance->Montage_Play(FireAnimation, 1.f);
+		//Set Spawn Collision Handling Override
+		FActorSpawnParameters ActorSpawnParams;
+		//ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+		// spawn the projectile at the muzzle
+		ASpell* spell;
+		switch (Task) {
+			case (ETaskEnum::None):
+				break;
+			case(ETaskEnum::Fire):
+				spell = World->SpawnActor<ASpell>(Spell0, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown0 = spell->cooldown;
+				break;
+			case(ETaskEnum::Spell1):
+				spell = World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown1 = spell->cooldown;
+				break;
+
 		}
+
 	}
+
 }
 
 
@@ -280,10 +299,12 @@ void ATwoWizardsCharacter::OnRep_Task()
 		case (ETaskEnum::None):
 			break;
 		case(ETaskEnum::Fire):
-			OnFire();
+			if (Cooldown0<=0)
+				OnSpell();
 			break;
 		case(ETaskEnum::Spell1):
-			OnSpell();
+			if (Cooldown1 <= 0)
+				OnSpell();
 			break;
 
 	}
