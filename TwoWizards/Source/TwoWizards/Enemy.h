@@ -30,7 +30,10 @@ public:
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
-	UPROPERTY(VisibleAnywhere) //Not sure if this is necessary?
-		int health;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
+		float health;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
+		float maxHealth;
 };

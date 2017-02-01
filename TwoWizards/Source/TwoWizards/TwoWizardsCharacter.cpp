@@ -111,6 +111,9 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 
 	PlayerInputComponent->BindAction("Spell1", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell1);
+	PlayerInputComponent->BindAction("Spell2", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell2);
+	PlayerInputComponent->BindAction("Spell3", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell3);
+	PlayerInputComponent->BindAction("Spell4", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell4);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -256,6 +259,18 @@ void ATwoWizardsCharacter::OnSpell()
 				spell = World->SpawnActor<ASpell>(Spell1, SpawnLocation, SpawnRotation, ActorSpawnParams);
 				Cooldown1 = spell->cooldown;
 				break;
+			case(ETaskEnum::Spell2):
+				spell = World->SpawnActor<ASpell>(Spell2, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown2 = spell->cooldown;
+				break;
+			case(ETaskEnum::Spell3):
+				spell = World->SpawnActor<ASpell>(Spell3, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown3 = spell->cooldown;
+				break;
+			case(ETaskEnum::Spell4):
+				spell = World->SpawnActor<ASpell>(Spell4, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				Cooldown4 = spell->cooldown;
+				break;
 
 		}
 
@@ -304,6 +319,18 @@ void ATwoWizardsCharacter::OnRep_Task()
 			break;
 		case(ETaskEnum::Spell1):
 			if (Cooldown1 <= 0)
+				OnSpell();
+			break;
+		case(ETaskEnum::Spell2):
+			if (Cooldown2 <= 0)
+				OnSpell();
+			break;
+		case(ETaskEnum::Spell3):
+			if (Cooldown3 <= 0)
+				OnSpell();
+			break;
+		case(ETaskEnum::Spell4):
+			if (Cooldown4 <= 0)
 				OnSpell();
 			break;
 
