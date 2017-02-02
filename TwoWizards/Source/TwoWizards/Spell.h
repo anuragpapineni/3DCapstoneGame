@@ -20,22 +20,22 @@ UCLASS()
 class TWOWIZARDS_API ASpell : public AActor
 {
 	GENERATED_BODY()
-	/** Sphere collision component */
-	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
-	class UShapeComponent* CollisionComp;
-
-	/** Projectile movement component */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
-	class UProjectileMovementComponent* ProjectileMovement;
 
 
 public:	
 
+	/* wizard who cast the spell*/
 	ATwoWizardsCharacter* caster;
 
-	/** Sound to play while traveling */
+	/** Sound to play on cast */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		class USoundBase* CastSound;
+
+
+	/** Sound to play on impact */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		class USoundBase* HitSound;
+
 
 	/** Sound to play while traveling */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -45,10 +45,9 @@ public:
 	UPROPERTY(EditAnywhere)
 		float cooldown;
 
-	/** Sound to play on impact */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class USoundBase* HitSound;
-
+	/** damage */
+	UPROPERTY(EditAnywhere)
+		float damage;
 	// Sets default values for this actor's properties
 	ASpell();
 
@@ -58,9 +57,6 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	/** called when projectile hits something */
-	UFUNCTION()
-		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 	
 };
