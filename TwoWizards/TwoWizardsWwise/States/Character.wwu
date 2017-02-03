@@ -6,10 +6,12 @@
 				<StateGroup Name="Material" ID="{588C4907-A436-4A20-9778-D4D569FF95FF}">
 					<ChildrenList>
 						<State Name="None" ID="{0B69CDE5-BAF1-4D86-8AEA-B69806CD5F84}"/>
-						<State Name="Dirt" ID="{404B5D98-D71A-466F-8D85-9016A2BCFFAF}"/>
+						<State Name="Grass" ID="{404B5D98-D71A-466F-8D85-9016A2BCFFAF}"/>
 						<State Name="Water" ID="{CF2B270E-3030-47AD-B715-8C3FC1E2B565}"/>
 						<State Name="Altar" ID="{13515C9D-8746-4D45-ABFA-4CA74855B17E}"/>
 						<State Name="Ice" ID="{5067DC52-20CF-44C5-9857-7D494DC1A651}"/>
+						<State Name="Rock" ID="{874EFD84-C9E6-4B0A-B52B-1E26E579A3D6}"/>
+						<State Name="Dirt" ID="{715FCD01-887E-4ED8-A63F-D9FD25BF3AD4}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

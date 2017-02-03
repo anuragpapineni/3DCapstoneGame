@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1A347844-2745-43C7-BE8A-91D9F6C6BF51}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Soundtrack" ID="{1A347844-2745-43C7-BE8A-91D9F6C6BF51}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" ShortID="707335291" Type="SoundFX">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Audio 4-St" ID="{53FADB35-51FD-4C2E-9CC7-710848DFC086}" ShortID="597888100">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="8"/>
+								<Property Name="LoopBegin" Type="Real64" Value="69.3630635805357"/>
+								<Property Name="LoopEnd" Type="Real64" Value="141.368649193169"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="141.523346437581"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>SFX_Audio 4-St.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{4D4B33AA-7FA1-42FA-A0B9-5AA76E50972E}">
+							<PropertyList>
+								<Property Name="PanX" Type="Real64" Value="-0.599700149925047"/>
+								<Property Name="PanY" Type="Real64" Value="-0.316455696202531"/>
+							</PropertyList>
+						</Panner>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Audio 4-St" ID="{53FADB35-51FD-4C2E-9CC7-710848DFC086}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

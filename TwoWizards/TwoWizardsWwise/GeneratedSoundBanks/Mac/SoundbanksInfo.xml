@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,11 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2082426231" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundtrack</ObjectPath>
+			<ShortName>Soundtrack</ShortName>
+			<Path>Soundtrack.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="2385628198" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Footsteps</ObjectPath>

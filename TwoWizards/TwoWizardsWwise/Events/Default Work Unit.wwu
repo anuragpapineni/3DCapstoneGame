@@ -21,6 +21,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Test_Piano" ID="{A9770C6A-E8A3-4876-8AC0-4C08EEE4EC34}">
+					<ChildrenList>
+						<Action Name="Play" ID="{42E6985B-CC46-4002-8ED9-07BB59DCF4A5}" ShortID="781827374" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{5D149D99-ACA1-46F3-8B23-1976680AA48B}" Global="false">
+									<ObjectRef Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" WorkUnitID="{1A347844-2745-43C7-BE8A-91D9F6C6BF51}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

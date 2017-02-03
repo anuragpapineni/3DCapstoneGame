@@ -4,19 +4,20 @@
 		<Banks>
 			<Language ID="0">
 				<File Name="AmbientBank" Hash="1480766850" Timestamp="131303228858605726"/>
-				<File Name="Footsteps" Hash="1911581601" Timestamp="131304028303812183"/>
-				<File Name="Init" Hash="4279993605" Timestamp="131304028304720862"/>
+				<File Name="Footsteps" Hash="1911581601" Timestamp="131304645231233729"/>
+				<File Name="Init" Hash="4279993605" Timestamp="131304645232016425"/>
 				<File Name="MatineeBank" Hash="412163217" Timestamp="131303228858070342"/>
 				<File Name="ReverbBank" Hash="3288580641" Timestamp="131303228858140396"/>
 				<File Name="SFX" Hash="2909052087" Timestamp="131303705291694325"/>
-				<File Name="Spells" Hash="3108197289" Timestamp="131303801082795795"/>
+				<File Name="Soundtrack" Hash="18615730" Timestamp="131304645231901493"/>
+				<File Name="Spells" Hash="573210674" Timestamp="131304644391739823"/>
 				<File Name="SwitchBank" Hash="4220856066" Timestamp="131303228860161651"/>
 				<File Name="VelocityBank" Hash="660741719" Timestamp="131303228860512571"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1665845094" Timestamp="131304028304775709"/>
+				<File Name="" Hash="2735602069" Timestamp="131304645232071464"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -24,19 +25,20 @@
 		<Banks>
 			<Language ID="0">
 				<File Name="AmbientBank" Hash="1480766850" Timestamp="131303228852063484"/>
-				<File Name="Footsteps" Hash="1911581601" Timestamp="131304028297245735"/>
-				<File Name="Init" Hash="3850416755" Timestamp="131304028297782142"/>
+				<File Name="Footsteps" Hash="1911581601" Timestamp="131304645235207827"/>
+				<File Name="Init" Hash="3850416755" Timestamp="131304645235893177"/>
 				<File Name="MatineeBank" Hash="412163217" Timestamp="131303228851215579"/>
 				<File Name="ReverbBank" Hash="3288580641" Timestamp="131303228851518011"/>
 				<File Name="SFX" Hash="2909052087" Timestamp="131303705285117776"/>
-				<File Name="Spells" Hash="3108197289" Timestamp="131303800983150632"/>
+				<File Name="Soundtrack" Hash="18615730" Timestamp="131304645235828110"/>
+				<File Name="Spells" Hash="573210674" Timestamp="131304644386500446"/>
 				<File Name="SwitchBank" Hash="4220856066" Timestamp="131303228853291176"/>
 				<File Name="VelocityBank" Hash="660741719" Timestamp="131303228853734982"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="733451400" Timestamp="131304028298115242"/>
+				<File Name="" Hash="164767991" Timestamp="131304645235943401"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

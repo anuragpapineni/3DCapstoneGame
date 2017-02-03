@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="Project" SchemaVersion="72" WwiseVersion="v2016.1.5" WwiseBuild="5910">
 	<ProjectInfo>
-		<Project Name="Two Wizards" ID="{7CA6EF0E-9A42-465C-8D4E-1C8DD8E6183B}">
+		<Project Name="Two_Wizards" ID="{7CA6EF0E-9A42-465C-8D4E-1C8DD8E6183B}">
 			<Platforms>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{1F8671BB-B145-4CF6-B020-E166F03AF4B3}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{B680CE1D-1673-41FE-B7BF-AEE433EB6E5A}"/>

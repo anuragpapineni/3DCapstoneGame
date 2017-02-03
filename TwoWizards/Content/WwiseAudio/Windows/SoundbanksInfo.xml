@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\.cache\Windows\</SourceFilesRoot>
+		<ProjectRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\</SourceFilesRoot>
 		<SoundBanksRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,20 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2082426231" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundtrack</ObjectPath>
+			<ShortName>Soundtrack</ShortName>
+			<Path>Soundtrack.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1604129848" Name="Play_Test_Piano" ObjectPath="\Events\Default Work Unit\Play_Test_Piano"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="597888100" Language="SFX">
+					<ShortName>SFX_Audio 4-St.wav</ShortName>
+					<Path>SFX\SFX_Audio 4-St_B9448E36.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2385628198" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Footsteps</ObjectPath>
