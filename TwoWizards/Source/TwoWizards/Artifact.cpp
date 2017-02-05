@@ -14,18 +14,7 @@ AArtifact::AArtifact()
 	TBox->bGenerateOverlapEvents = true;
 	TBox->OnComponentBeginOverlap.AddDynamic(this, &AArtifact::TriggerEnter);
 	TBox->OnComponentEndOverlap.AddDynamic(this, &AArtifact::TriggerExit);
-	/*
-	pickupRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PickupRoot"));
-	RootComponent = pickupRoot;
-	pickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyMesh"));
-	pickupMesh->AttachToComponent(pickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-
-	pickupBox = CreateDefaultSubobject<UBoxComponent>(TEXT("PickupBox"));
-	pickupBox->SetWorldScale3D(FVector(1.0f, 1.0f, 1.0f));
-	pickupBox->bGenerateOverlapEvents = true;
-	pickupBox->OnComponentBeginOverlap.AddDynamic(this, &APickup::OnPlayerEnterPickupBox);
-	pickupBox->AttachToComponent(pickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-	*/
+	
 	RootComponent = TBox;
 
 	TBoxMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box Mesh"));
@@ -64,14 +53,14 @@ void AArtifact::GetPlayer(AActor * player)
 	playerController = Cast<ATwoWizardsCharacter>(player);
 }
 
-void AArtifact::TriggerEnter(AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+void AArtifact::TriggerEnter(UPrimitiveComponent* overlappedComp, AActor* OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
 	bItemIsWithinRange = true;
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Press 'E' to pick up the artifact!"));
 	GetPlayer(OtherActor);
 }
 
-void AArtifact::TriggerExit(AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex)
+void AArtifact::TriggerExit(UPrimitiveComponent* overlappedComp, AActor* OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex)
 {
 	bItemIsWithinRange = false;
 }
