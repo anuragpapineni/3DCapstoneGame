@@ -10,6 +10,7 @@
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "MotionControllerComponent.h"
 #include "UnrealNetwork.h"
+#include "Engine.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -109,11 +110,13 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATwoWizardsCharacter::DoFire);
 
-
 	PlayerInputComponent->BindAction("Spell1", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell1);
 	PlayerInputComponent->BindAction("Spell2", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell2);
 	PlayerInputComponent->BindAction("Spell3", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell3);
 	PlayerInputComponent->BindAction("Spell4", IE_Pressed, this, &ATwoWizardsCharacter::DoSpell4);
+
+	PlayerInputComponent->BindAction("ArtifactPickup", IE_Pressed, this, &ATwoWizardsCharacter::BeginArtifactPickup);
+	PlayerInputComponent->BindAction("ArtifactPickup", IE_Released, this, &ATwoWizardsCharacter::EndArtifactPickup);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -276,6 +279,19 @@ void ATwoWizardsCharacter::OnSpell()
 
 	}
 
+}
+
+void ATwoWizardsCharacter::BeginArtifactPickup()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup Begin"));
+
+	bIsPickingUp = true;
+}
+
+void ATwoWizardsCharacter::EndArtifactPickup()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup End"));
+	bIsPickingUp = false;
 }
 
 

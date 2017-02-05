@@ -97,6 +97,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
 
+	bool hasArtifact = false;
+	bool bIsPickingUp = false;
 
 protected:
 	
@@ -121,6 +123,10 @@ protected:
 
 	/** Fires a spell. */
 	void OnSpell();
+
+	/** Handles picking up an artifact*/
+	void BeginArtifactPickup();
+	void EndArtifactPickup();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
