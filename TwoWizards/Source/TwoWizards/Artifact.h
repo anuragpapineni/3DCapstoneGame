@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
 #include "GameFramework/Actor.h"
 #include "TwoWizardsCharacter.h"
 #include "Artifact.generated.h"
@@ -21,7 +20,7 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	UShapeComponent * TBox;
+	UShapeComponent* TBox;
 
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* TBoxMesh;

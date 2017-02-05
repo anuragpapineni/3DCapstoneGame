@@ -46,6 +46,8 @@ void AArtifact::Tick( float DeltaTime )
 
 void AArtifact::Pickup()
 {
+	//Not following tutorial
+	this->AttachRootComponentToActor(playerController);
 }
 
 void AArtifact::GetPlayer(AActor * player)
