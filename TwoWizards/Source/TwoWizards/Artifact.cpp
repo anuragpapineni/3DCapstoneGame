@@ -15,7 +15,16 @@ AArtifact::AArtifact()
 	TBox->OnComponentBeginOverlap.AddDynamic(this, &AArtifact::TriggerEnter);
 	TBox->OnComponentEndOverlap.AddDynamic(this, &AArtifact::TriggerExit);
 	/*
+	pickupRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PickupRoot"));
+	RootComponent = pickupRoot;
+	pickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyMesh"));
+	pickupMesh->AttachToComponent(pickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+
+	pickupBox = CreateDefaultSubobject<UBoxComponent>(TEXT("PickupBox"));
+	pickupBox->SetWorldScale3D(FVector(1.0f, 1.0f, 1.0f));
+	pickupBox->bGenerateOverlapEvents = true;
 	pickupBox->OnComponentBeginOverlap.AddDynamic(this, &APickup::OnPlayerEnterPickupBox);
+	pickupBox->AttachToComponent(pickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 	*/
 	RootComponent = TBox;
 
