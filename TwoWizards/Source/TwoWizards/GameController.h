@@ -21,7 +21,8 @@ public:
 	static void DisableActor(AActor* actor);
 
 	static void EnableActor(AActor* actor);
-
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ATwoWizardsCharacter* player1;
 
 	ATwoWizardsCharacter* player2;
