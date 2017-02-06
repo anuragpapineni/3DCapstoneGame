@@ -40,6 +40,8 @@ class ATwoWizardsCharacter : public ACharacter
 	UPROPERTY(ReplicatedUsing = OnRep_Task)
 		TEnumAsByte<ETaskEnum::Type> Task;
 
+
+
 public:
 	ATwoWizardsCharacter();
 
@@ -96,6 +98,9 @@ public:
 	/** AnimMontage to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+        int health;
 
 
 protected:
