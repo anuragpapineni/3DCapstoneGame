@@ -38,7 +38,5 @@ void AGameController::BeginPlay()
 void AGameController::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
-	for (AEnemy* enemy : enemies) {
-	}
 }
 

@@ -37,12 +37,12 @@ void ASTPSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 	if (OtherActor->IsA(AEnemy::StaticClass()))
 	{
 		AEnemy* enemy = ((AEnemy*)OtherActor);
-		//if (enemy->lastHitBy != 0 && (element - 1 == enemy->lastHitBy || (element == Element::Type::Fire&&enemy->lastHitBy == Element::Type::Earth)))
-		//	enemy->health -= 2;
-		//else
+		if (enemy->lastElement != 0 && (element - 1 == enemy->lastElement || (element == Element::Type::Fire&&enemy->lastElement == Element::Type::Earth)))
+			enemy->health -= 2;
+		else
 
 		enemy->health -= damage;
-		enemy->lastHitBy = element;
+		enemy->lastElement = element;
 		if (((AEnemy*)OtherActor)->health <= 0)
 		{
 			AGameController::DisableActor(OtherActor);

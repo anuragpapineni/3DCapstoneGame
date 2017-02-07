@@ -2,7 +2,7 @@
 	"TargetName" : "TwoWizardsEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "15de45b2-4e4b-4bc8-9fdf-62cfb545df16",
+	"BuildId" : "342c302a-fdb3-44d3-b7f6-ac7b7b3d4e26",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -16,15 +16,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards-9317.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards-9317.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TwoWizards-9317.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TwoWizards.lib",
 			"Type" : "ImportLibrary"
 		}
 	],
@@ -188,6 +188,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Slate/SlateRemote/SlateRemote.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/Wwise/Wwise.uplugin",
 			"Type" : "UFS"
 		},
 		{

@@ -2,74 +2,42 @@
 
 #include "TwoWizards.h"
 #include "Enemy.h"
-#include "TwoWizardsProjectile.h"
 #include "GameController.h"
 
-#define COLLISION_ENEMY ECollisionChannel::ECC_GameTraceChannel2
-#define COLLISION_ALLY ECollisionChannel::ECC_GameTraceChannel3
 
-AEnemy::AEnemy(const FObjectInitializer& ObjectInitializer)
-	:Super(ObjectInitializer)
+// Sets default values
+AEnemy::AEnemy()
 {
-	bReplicateMovement = true;
-	bReplicates = true;
-	bAlwaysRelevant = true;
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+    bReplicateMovement = true;
+    bReplicates = true;
+    bAlwaysRelevant = true;
+
+ 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	CollisionComp = ObjectInitializer.CreateDefaultSubobject<UBoxComponent>(this, TEXT("ColComp"));
-
-	CollisionComp->OnComponentHit.AddDynamic(this, &AEnemy::OnHit);
-
-	CollisionComp->BodyInstance.SetCollisionProfileName("enemy");
-	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);
-
-	CollisionComp->SetCollisionObjectType(COLLISION_ENEMY);
-	CollisionComp->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
-	CollisionComp->SetCollisionResponseToChannel(COLLISION_ENEMY, ECollisionResponse::ECR_Ignore);
-	CollisionComp->SetCollisionResponseToChannel(COLLISION_ALLY, ECollisionResponse::ECR_Block);
-
-	RootComponent = CollisionComp;
-
-	EnemyMesh = CreateDefaultSubobject <UStaticMeshComponent>(TEXT("EnemyMesh"));
-	EnemyMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepWorldTransform);
-
-	health = 3;
+    
+    maxHealth = 3;
+    health = maxHealth;
 }
 
 // Called when the game starts or when spawned
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	CollisionComp->BodyInstance.SetCollisionProfileName("enemy");
-	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);
-
-	CollisionComp->SetCollisionObjectType(COLLISION_ENEMY);
-	CollisionComp->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
-	CollisionComp->SetCollisionResponseToChannel(COLLISION_ENEMY, ECollisionResponse::ECR_Ignore);
-	CollisionComp->SetCollisionResponseToChannel(COLLISION_ALLY, ECollisionResponse::ECR_Block);
-
-	AGameController::instance->enemies.push_back(this);
+    AGameController::instance->enemies.push_back(this);
+	
 }
 
 // Called every frame
-void AEnemy::Tick(float DeltaTime)
+void AEnemy::Tick( float DeltaTime )
 {
-	Super::Tick(DeltaTime);
-	//this->SetActorLocation(GetActorLocation() + FVector(0, DeltaTime*100, 0));
+	Super::Tick( DeltaTime );
+
 }
 
-
-void AEnemy::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+// Called to bind functionality to input
+void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-
-	if (OtherActor->IsA(ATwoWizardsProjectile::StaticClass()))
-	{
-		health--;
-		if (health <= 0)
-		{
-			Destroy();
-		}
-	}
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
+
