@@ -13,8 +13,8 @@ AEnemy::AEnemy()
     bReplicates = true;
     bAlwaysRelevant = true;
 
-	SceneComp = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
-	RootComponent = SceneComp;
+	//SceneComp = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
+	//RootComponent = SceneComp;
 
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
