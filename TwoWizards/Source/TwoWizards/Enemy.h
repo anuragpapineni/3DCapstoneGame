@@ -32,5 +32,8 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
         float maxHealth;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = CPPTick)
+		void EnemyTick();
 	
 };

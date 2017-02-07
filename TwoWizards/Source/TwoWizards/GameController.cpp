@@ -8,6 +8,9 @@ AGameController* AGameController::instance = nullptr;
 // Sets default values
 AGameController::AGameController()
 {
+	bReplicateMovement = true;
+	bReplicates = true;
+	bAlwaysRelevant = true;
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	AGameController::instance = this;
@@ -17,7 +20,7 @@ void AGameController::DisableActor(AActor * actor)
 {
 	actor->SetActorHiddenInGame(true);
 	actor->SetActorEnableCollision(false);
-	actor->PrimaryActorTick.bCanEverTick = false;
+	actor->SetActorTickInterval(FLT_MAX);
 }
 
 
@@ -25,7 +28,7 @@ void AGameController::EnableActor(AActor * actor)
 {
 	actor->SetActorHiddenInGame(false);
 	actor->SetActorEnableCollision(true);
-	actor->PrimaryActorTick.bCanEverTick = true;
+	actor->SetActorTickInterval(0);
 }
 
 // Called when the game starts or when spawned

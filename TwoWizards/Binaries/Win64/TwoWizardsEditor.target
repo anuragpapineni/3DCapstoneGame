@@ -2,7 +2,7 @@
 	"TargetName" : "TwoWizardsEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "b07b25b0-59fd-4a36-9be5-0e38d46ee226",
+	"BuildId" : "d0375690-808b-4456-989e-cb3241ff00e9",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -16,15 +16,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards-680.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-TwoWizards-680.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TwoWizards.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TwoWizards-680.lib",
 			"Type" : "ImportLibrary"
 		}
 	],
