@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="72">
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Ambiance.wwu" DateLow="3880501279" DateHigh="30571917"/>
-	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Character.wwu" DateLow="3879720733" DateHigh="30571917"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Character.wwu" DateLow="1681803850" DateHigh="30572114"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3204816260" DateHigh="30571759"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1721572466" DateHigh="30571759"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="2848689715" DateHigh="30571121"/>
@@ -29,6 +29,7 @@
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Events\Default Work Unit.wwu" DateLow="2412299018" DateHigh="30571757"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Game Parameters\Default Work Unit.wwu" DateLow="1723283698" DateHigh="30571759"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="2839071965" DateHigh="30571121"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Game Parameters\temp.wwu" DateLow="2339348716" DateHigh="30572188"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1799058903" DateHigh="30571361"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3918286121" DateHigh="30571417"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1799108930" DateHigh="30571361"/>
@@ -42,7 +43,7 @@
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\States\Default Work Unit.wwu" DateLow="1798743671" DateHigh="30571361"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Switches\Default Work Unit.wwu" DateLow="1798500242" DateHigh="30571361"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Triggers\Default Work Unit.wwu" DateLow="1799399140" DateHigh="30571361"/>
-	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Two_Wizards.mitch_000.wsettings" DateLow="3928690647" DateHigh="30571917"/>
+	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Two_Wizards.mitch_000.wsettings" DateLow="3555526342" DateHigh="30572702"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\Two_Wizards.wproj" DateLow="3204404190" DateHigh="30571759"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Character.wwu" DateLow="4076235828" DateHigh="30571539"/>
 	<ValidationCacheItem File="C:\Users\mitch_000\Documents\WwiseProjects\Two_Wizards\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4076140603" DateHigh="30571539"/>
