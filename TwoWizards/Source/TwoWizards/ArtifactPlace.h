@@ -20,6 +20,23 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+	UShapeComponent* TBox;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* TBoxMesh;
+
+	ATwoWizardsCharacter* playerController;
+
+	void PutDown();
+
+	void GetPlayer(AActor* player);
+
+	bool bPlayerIsWithinRange = false;
 	
-	
+	UFUNCTION()
+		void TriggerEnter(UPrimitiveComponent * overlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION()
+		void TriggerExit(UPrimitiveComponent * overlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
 };

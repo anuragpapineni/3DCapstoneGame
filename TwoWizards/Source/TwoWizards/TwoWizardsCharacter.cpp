@@ -75,7 +75,7 @@ void ATwoWizardsCharacter::Tick(float DeltaTime)
 	Cooldown3 -= DeltaTime;
 	Cooldown4 -= DeltaTime;
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Has artifact? %s"), hasArtifact? TEXT("true"):TEXT("false") ));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Has artifact? %s"), hasArtifact? TEXT("true"):TEXT("false") ));
 }
 
 void ATwoWizardsCharacter::BeginPlay()
@@ -120,6 +120,9 @@ void ATwoWizardsCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 	PlayerInputComponent->BindAction("ArtifactPickup", IE_Pressed, this, &ATwoWizardsCharacter::BeginArtifactPickup);
 	PlayerInputComponent->BindAction("ArtifactPickup", IE_Released, this, &ATwoWizardsCharacter::EndArtifactPickup);
+
+	PlayerInputComponent->BindAction("ArtifactPutDown", IE_Pressed, this, &ATwoWizardsCharacter::BeginArtifactPutDown);
+	PlayerInputComponent->BindAction("ArtifactPutDown", IE_Released, this, &ATwoWizardsCharacter::EndArtifactPutDown);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -286,15 +289,30 @@ void ATwoWizardsCharacter::OnSpell()
 
 void ATwoWizardsCharacter::BeginArtifactPickup()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup Begin"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup Begin"));
 
 	bIsPickingUp = true;
 }
 
 void ATwoWizardsCharacter::EndArtifactPickup()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup End"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Pickup End"));
 	bIsPickingUp = false;
+}
+
+
+void ATwoWizardsCharacter::BeginArtifactPutDown()
+{
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Put Down Begin"));
+
+	bIsPuttingDown = true;
+}
+
+void ATwoWizardsCharacter::EndArtifactPutDown()
+{
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Artifact Put Down End"));
+
+	bIsPuttingDown = false;
 }
 
 

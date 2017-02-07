@@ -99,6 +99,7 @@ public:
 
 	bool hasArtifact = false;
 	bool bIsPickingUp = false;
+	bool bIsPuttingDown = false;
 
 protected:
 	
@@ -127,6 +128,10 @@ protected:
 	/** Handles picking up an artifact*/
 	void BeginArtifactPickup();
 	void EndArtifactPickup();
+
+	/** Handles putting down an artifact*/
+	void BeginArtifactPutDown();
+	void EndArtifactPutDown();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

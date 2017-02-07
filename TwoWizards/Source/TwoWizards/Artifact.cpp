@@ -45,7 +45,14 @@ void AArtifact::Tick( float DeltaTime )
 void AArtifact::Pickup()
 {
 	playerController->hasArtifact = true;
-	this->AttachRootComponentToActor(playerController);
+	this->AttachToActor(playerController, FAttachmentTransformRules::KeepRelativeTransform);
+	//this->AttachRootComponentToActor(playerController);
+}
+
+void AArtifact::PlaceOnHolder()
+{
+	//this->DetachRootComponentFromParent();
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Place On Holder Method Called"));
 }
 
 void AArtifact::GetPlayer(AActor * player)

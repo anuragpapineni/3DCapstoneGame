@@ -28,6 +28,7 @@ public:
 	ATwoWizardsCharacter* playerController;
 
 	void Pickup();
+	void PlaceOnHolder();
 
 	void GetPlayer(AActor* player);
 
