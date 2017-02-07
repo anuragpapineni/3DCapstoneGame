@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
 #include "GameFramework/Actor.h"
+#include "TwoWizardsCharacter.h"
 #include "ArtifactPlace.generated.h"
 
 UCLASS()

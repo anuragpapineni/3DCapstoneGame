@@ -11,6 +11,7 @@
 #include "MotionControllerComponent.h"
 #include "UnrealNetwork.h"
 #include "Engine.h"
+#include <typeinfo>
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -73,6 +74,8 @@ void ATwoWizardsCharacter::Tick(float DeltaTime)
 	Cooldown2 -= DeltaTime;
 	Cooldown3 -= DeltaTime;
 	Cooldown4 -= DeltaTime;
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Has artifact? %s"), hasArtifact? TEXT("true"):TEXT("false") ));
 }
 
 void ATwoWizardsCharacter::BeginPlay()
