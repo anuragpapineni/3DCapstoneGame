@@ -82,10 +82,12 @@ void ATwoWizardsCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	if (GetNetMode() != NM_Client) {
-		if (AGameController::instance->player1)
-			AGameController::instance->player2 = this;
-		else
+		if (!AGameController::instance->player1)
 			AGameController::instance->player1 = this;
+	}
+	else {
+		if (!AGameController::instance->player2)
+			AGameController::instance->player2 = this;
 	}
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor

@@ -4,6 +4,7 @@
 #include "STPSpell.h"
 #include "Enemy.h"
 #include "GameController.h"
+#include <string>
 
 ASTPSpell::ASTPSpell()
 {
@@ -49,6 +50,7 @@ void ASTPSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 
 void ASTPSpell::BeginPlay() {
 	Super::BeginPlay();
-	CollisionComp->MoveIgnoreActors.Add(AGameController::instance->player1);
-	CollisionComp->MoveIgnoreActors.Add(AGameController::instance->player2);
+	TArray<AActor*> FoundActors;
+	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
+	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
 }

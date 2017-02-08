@@ -47,8 +47,13 @@ void AExplodingSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 			AGameController::DisableActor(OtherActor);
 		}
 	}
-	if (!OtherActor->IsA(ATwoWizardsCharacter::StaticClass()))
+	if (OtherActor->IsA(ATwoWizardsCharacter::StaticClass())) {
+		CollisionComp->MoveIgnoreActors.Add(OtherActor);
+		CollisionComp->MoveIgnoreActors.Add(OtherActor);
+	}
+	else {
 		Destroy();
+	}
 }
 
 
