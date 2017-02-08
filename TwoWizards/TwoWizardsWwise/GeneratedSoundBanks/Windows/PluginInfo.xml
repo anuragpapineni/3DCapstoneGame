@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="Two_Wizards" Platform="Windows" BasePlatform="Windows">
 	<Plugins>
+		<Plugin Name="iZotope Hybrid Reverb" ID="135219" DLL="iZotope"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Wind" ID="7798786" DLL="AkSoundSeedAir"/>
 	</Plugins>
 </PluginInfo>

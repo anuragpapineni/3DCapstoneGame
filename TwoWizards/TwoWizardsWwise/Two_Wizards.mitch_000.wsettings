@@ -21,7 +21,7 @@
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="GenerateSoundBanks\SelectedLanguages" Type="string" Value="DAAAAA=="/>
 				<Property Name="GenerateSoundBanks\SelectedPlatforms" Type="string" Value="u3GGH0Wx9kywIOFm8Dr0sx3OgLZzFv5Bt7+u5DPrblo="/>
-				<Property Name="GenerateSoundBanks\SelectedSoundBanks" Type="string" Value="LgT/zMnVAE+0JLF6sFGL1iBDQI8YVelEnLwSfYJ9V7xrlUvJ1Z8oTKeUa/mcwFdYvZt3x2DLikOzYRJHwTvuNg=="/>
+				<Property Name="GenerateSoundBanks\SelectedSoundBanks" Type="string" Value="LgT/zMnVAE+0JLF6sFGL1iBDQI8YVelEnLwSfYJ9V7zfUqSkQwlGRqoji6hXVqCSa5VLydWfKEynlGv5nMBXWL2bd8dgy4pDs2ESR8E77jY="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="DAAAAA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="u3GGH0Wx9kywIOFm8Dr0sx3OgLZzFv5Bt7+u5DPrblo="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="LgT/zMnVAE+0JLF6sFGL1iBDQI8YVelEnLwSfYJ9V7xrlUvJ1Z8oTKeUa/mcwFdYvZt3x2DLikOzYRJHwTvuNt9SpKRDCUZGqiOLqFdWoJI="/>
@@ -35,11 +35,12 @@
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
 				<Property Name="PluginUserAcknowledge\SoundSeedAir" Type="bool" Value="True"/>
+				<Property Name="PluginUserAcknowledge\iZotope Hybrid Reverb" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\Expanded_10_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_11_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_12_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_13_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\Expanded_14_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\Expanded_14_1" Type="string" Value="EQvGJrGJ7UWKiA6xqBVR2A=="/>
 				<Property Name="ProjectExplorer\Expanded_15_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_16_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_17_1" Type="string" Value=""/>
@@ -47,7 +48,7 @@
 				<Property Name="ProjectExplorer\Expanded_19_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_1_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\Expanded_20_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="+d4Stsv0DUChkheG9pb9szqvrQAdAE9BqVomUc8n1J6ArtYHD+aTQZwafpBDNvPsBOZChxylNUO0/O3DfAzzjER4NBpFJ8dDvoqR2fbGv1FtJ/cwmEqHRZm8ra1bH1DdjPyBd3fdtkaGIktyeGkK0KTcjPjMorpKuKJTHQv+mWmSr1+AAK+vS6uDGxUjzX5GBp1xlgzHDkym4Ikz3rX4VehB5fHujmNMgjp9IguymY8DUf0CmxRJTYuvCFWPQVDr"/>
+				<Property Name="ProjectExplorer\Expanded_2_1" Type="string" Value="+d4Stsv0DUChkheG9pb9szqvrQAdAE9BqVomUc8n1J6ArtYHD+aTQZwafpBDNvPsBOZChxylNUO0/O3DfAzzjER4NBpFJ8dDvoqR2fbGv1GxQ+Sjy0ctTIHWdj7DWqmN"/>
 				<Property Name="ProjectExplorer\Expanded_3_1" Type="string" Value="WtZJYdckC0mI6Pz35hlV4Q=="/>
 				<Property Name="ProjectExplorer\Expanded_4_1" Type="string" Value="oBSsofVNrkK5wciBRjT1ow=="/>
 				<Property Name="ProjectExplorer\Expanded_5_1" Type="string" Value=""/>
@@ -56,7 +57,7 @@
 				<Property Name="ProjectExplorer\Expanded_8_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{22BF008A-54FB-4698-A14A-037975B344AC}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>
 				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>

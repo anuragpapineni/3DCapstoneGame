@@ -11,6 +11,40 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="85412153" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
+			<ShortName>Ambience</ShortName>
+			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1591070600" Name="Play_Cave_Ambiance" ObjectPath="\Events\Default Work Unit\Play_Cave_Ambiance"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="71612166" Language="SFX">
+					<ShortName>Cavern.wav</ShortName>
+					<Path>Plugins\iZotope Hybrid Reverb\Cavern_BB3D16FD.wem</Path>
+				</File>
+				<File Id="421895758" Language="SFX">
+					<ShortName>26910__thedapperdan__sewer-drain.wav</ShortName>
+					<Path>SFX\26910__thedapperdan__sewer-drain_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="518413872" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_C02EE1A4.wem</Path>
+				</File>
+				<File Id="729849911" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_AAEE85FE.wem</Path>
+				</File>
+				<File Id="803801945" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_333B64ED.wem</Path>
+				</File>
+				<File Id="942930032" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_6C6A655C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -35,7 +69,7 @@
 			<ShortName>Footsteps</ShortName>
 			<Path>Footsteps.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2523036220" Name="Evt_Footsteps" ObjectPath="\Events\Character\Evt_Footsteps"/>
+				<Event Id="648916573" Name="Footstep_Player" ObjectPath="\Events\Default Work Unit\Footstep_Player"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="165794388" Language="SFX">
@@ -60,17 +94,50 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="3212536008" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Mobs</ObjectPath>
+			<ShortName>Mobs</ShortName>
+			<Path>Mobs.bnk</Path>
+			<IncludedEvents>
+				<Event Id="116215848" Name="Crab_Death" ObjectPath="\Events\Default Work Unit\Crab_Death"/>
+				<Event Id="3180687786" Name="Crab_Walk_Play" ObjectPath="\Events\Default Work Unit\Crab_Walk_Play"/>
+				<Event Id="289922516" Name="Crab_Walk_Stop" ObjectPath="\Events\Default Work Unit\Crab_Walk_Stop"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="431391950" Language="SFX">
+					<ShortName>Crab_Death_3.wav</ShortName>
+					<Path>SFX\Crab_Death_3_9E69E797.wem</Path>
+				</File>
+				<File Id="482486395" Language="SFX">
+					<ShortName>Crab_Death_2.wav</ShortName>
+					<Path>SFX\Crab_Death_2_9E69E797.wem</Path>
+				</File>
+				<File Id="655047897" Language="SFX">
+					<ShortName>Crab_Walk.wav</ShortName>
+					<Path>SFX\Crab_Walk_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="880060409" Language="SFX">
+					<ShortName>Crab_Death_1.wav</ShortName>
+					<Path>SFX\Crab_Death_1_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="4160437992" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Spells</ObjectPath>
 			<ShortName>Spells</ShortName>
 			<Path>Spells.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3583747966" Name="Spell_Emitter" ObjectPath="\Events\Default Work Unit\Spell_Emitter"/>
+				<Event Id="4229250388" Name="Fireball_Cast" ObjectPath="\Events\Default Work Unit\Fireball_Cast"/>
+				<Event Id="1286903804" Name="Fireball_Hit" ObjectPath="\Events\Default Work Unit\Fireball_Hit"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="382681100" Language="SFX">
-					<ShortName>SFX_Spell Emitter Audio-St.wav</ShortName>
-					<Path>SFX\SFX_Spell Emitter Audio-St_4B8CC0C5.wem</Path>
+				<File Id="149410777" Language="SFX">
+					<ShortName>Fireball_Cast.wav</ShortName>
+					<Path>SFX\Fireball_Cast_9E69E797.wem</Path>
+				</File>
+				<File Id="481447631" Language="SFX">
+					<ShortName>Fireball_Hit.wav</ShortName>
+					<Path>SFX\Fireball_Hit_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

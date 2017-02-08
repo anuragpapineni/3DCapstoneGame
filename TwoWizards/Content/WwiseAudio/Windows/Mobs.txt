@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	116215848	Crab_Death			\Default Work Unit\Crab_Death	
+	289922516	Crab_Walk_Stop			\Default Work Unit\Crab_Walk_Stop	
+	3180687786	Crab_Walk_Play			\Default Work Unit\Crab_Walk_Play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	431391950	Crab_Death_3	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Crab_Death_3_9E69E797.wem		\Actor-Mixer Hierarchy\Mobs\Crab\Death\Crab_Death_3		148288
+	482486395	Crab_Death_2	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Crab_Death_2_9E69E797.wem		\Actor-Mixer Hierarchy\Mobs\Crab\Death\Crab_Death_2		128832
+	655047897	Crab_Walk	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Crab_Walk_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Mobs\Crab\Scuttle_Crab\Crab_Walk		809280
+	880060409	Crab_Death_1	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Crab_Death_1_9E69E797.wem		\Actor-Mixer Hierarchy\Mobs\Crab\Death\Crab_Death_1		107072
+

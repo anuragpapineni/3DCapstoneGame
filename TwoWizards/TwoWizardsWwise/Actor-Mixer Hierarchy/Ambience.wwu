@@ -32,6 +32,10 @@
 				<Folder Name="Cave" ID="{07D6AE80-E60F-4193-9C1A-7E904336F3EC}" ShortID="520322179">
 					<ChildrenList>
 						<ActorMixer Name="Cave_Ambience_SFX" ID="{8742E604-A51C-4335-B4FC-EDC37C0CF38C}" ShortID="554541881">
+							<PropertyList>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Spatialization" Type="bool" Value="False"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
@@ -44,6 +48,11 @@
 								<Sound Name="Cave Wind" ID="{73211C36-6743-4971-92BE-D2397C7E3F39}" ShortID="902584030" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -158,15 +167,20 @@
 								</Sound>
 								<Sound Name="Cave Drips" ID="{C90A3A84-5CA6-40F3-9DB3-B68C790DA03F}" ShortID="255927649" Type="SoundFX">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>39</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>43</Value>
+												<Value>52</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-30</Value>
+												<Value>-18</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -190,6 +204,7 @@
 								</Sound>
 								<RandomSequenceContainer Name="Drips" ID="{A3E443B1-47CB-4C2D-81D6-763EC35AA98D}" ShortID="4675011">
 									<PropertyList>
+										<Property Name="3DPositionSource" Type="int16" Value="0"/>
 										<Property Name="EnablePanner" Type="bool" Value="True"/>
 										<Property Name="Highpass" Type="int16">
 											<ModifierList>
@@ -204,11 +219,13 @@
 											</ModifierList>
 										</Property>
 										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>51</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{9BE61F91-5DE8-48DF-9626-C64266D16B77}">
 														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="33"/>
 														</PropertyList>
 													</Modifier>
@@ -216,6 +233,7 @@
 											</ModifierList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
@@ -230,10 +248,35 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{424BBCC6-CCB4-400A-BED4-086DEA47D5D7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-60"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
+											<ObjectRef Name="Cavern" ID="{1521FCD2-6307-424F-A67D-5E76C381342F}" WorkUnitID="{33EB1407-1601-4B0D-A620-9099C0353115}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
@@ -241,6 +284,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="351623__reiyamanor__water-drops" ID="{A8710BF8-56EE-472D-B057-CDBC1D555C2E}" ShortID="299647201" Type="SoundFX">
+											<PropertyList>
+												<Property Name="3DPositionSource" Type="int16" Value="0"/>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
@@ -262,6 +309,55 @@
 													<AudioFile>351623__reiyamanor__water-drops.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{885D31B6-C06E-45F3-9351-794738C8563A}">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="False"/>
+														<Property Name="PlayMechanismTransitionTime" Type="Real64" Value="0"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="351623__reiyamanor__water-drops_Path" ID="{BF387635-DDE4-44CA-9CC0-DC6746297627}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="100"/>
+																<Property Name="RandomY" Type="Real64" Value="100"/>
+																<Property Name="RandomZ" Type="Real64" Value="100"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>-95.69892</XPos>
+																	<YPos>98.08184</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>95.16129</XPos>
+																	<YPos>97.95396</YPos>
+																	<Flags>0</Flags>
+																	<Time>1250</Time>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-95.90793</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>-98.92473</XPos>
+																	<YPos>-96.41944</YPos>
+																	<Flags>0</Flags>
+																	<Time>3750</Time>
+																</Point>
+																<Point>
+																	<XPos>-97.31183</XPos>
+																	<YPos>87.72379</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 											<ActiveSourceList>
 												<ActiveSource Name="351623__reiyamanor__water-drops" ID="{1BC3A36A-3B20-4B53-8599-5E6B053E1027}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -348,10 +444,122 @@
 									<PositioningInfo>
 										<Panner Name="" ID="{DA8AE21F-6B9F-4CEB-BA2D-3DE04E93F16D}">
 											<PropertyList>
-												<Property Name="PanX" Type="Real64" Value="-0.30030030030026"/>
+												<Property Name="PanX" Type="Real64" Value="-0.300300300300313"/>
 												<Property Name="PanY" Type="Real64" Value="0.158478605388262"/>
 											</PropertyList>
 										</Panner>
+										<Position Name="" ID="{9E20139B-F27F-4D75-97B7-8606A4EC1EEF}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Drips_Path" ID="{BB3581D9-1A40-4FFD-8985-4F59FDA5CB3C}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="21"/>
+														<Property Name="RandomY" Type="Real64" Value="18"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-96.23656</XPos>
+															<YPos>97.05882</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_01" ID="{B4D3C470-1C3A-4085-9659-8FBD0F671D21}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="23"/>
+														<Property Name="RandomY" Type="Real64" Value="16"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>97.31183</XPos>
+															<YPos>97.57033</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_02" ID="{5CB64AE2-1C0D-4543-ADE2-4D3777C367F6}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="16"/>
+														<Property Name="RandomY" Type="Real64" Value="18"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>97.84946</XPos>
+															<YPos>-97.31458</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_03" ID="{1A0B6D8F-2587-4F56-A790-65F65363DC0D}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="13"/>
+														<Property Name="RandomY" Type="Real64" Value="16"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-98.3871</XPos>
+															<YPos>-98.3376</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_04" ID="{736988E7-98AC-4A82-9BDA-C7134C5908DA}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="16"/>
+														<Property Name="RandomY" Type="Real64" Value="18"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>1.07527</XPos>
+															<YPos>97.57033</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_05" ID="{051FA460-4BC7-47B5-88FE-1B0EEFE1520C}">
+													<PointList>
+														<Point>
+															<XPos>-97.31183</XPos>
+															<YPos>-0.12788</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_06" ID="{9718DB18-D2ED-400A-9EAA-CF9C42BDA399}">
+													<PointList>
+														<Point>
+															<XPos>96.23656</XPos>
+															<YPos>-0.63939</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Drips_Path_07" ID="{102A697A-4D7E-43EB-BEDA-058C50043116}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="17"/>
+														<Property Name="RandomY" Type="Real64" Value="21"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>3.22581</XPos>
+															<YPos>-97.82609</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
 									</PositioningInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>

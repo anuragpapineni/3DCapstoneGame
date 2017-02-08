@@ -1,10 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2523036220	Evt_Footsteps			\Character\Evt_Footsteps	
+	648916573	Footstep_Player			\Default Work Unit\Footstep_Player	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	344481046	Ice	Material			
+	1216965916	Stone	Material			
+	2144363834	Rock	Material			
+	2654748154	Water	Material			
+	4248645337	Grass	Material			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	165794388	Happy_Grass Step 4	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 4_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 4		66368
-	357535431	Happy_Grass Step 2	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 2_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 2		66368
-	395700950	Happy_Grass Step 3	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 3_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 3		66368
-	495475995	Happy_Grass Step 5	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 5_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step 5		66368
-	702333855	Happy_Grass Step	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step_9E69E797.wem		\Actor-Mixer Hierarchy\Character\Foley\Footsteps\Happy_Grass Step		66368
+	165794388	Happy_Grass Step 4	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foley\FS_Mixer\Footsteps\Footsteps_Grass\Happy_Grass Step 4		66368
+	357535431	Happy_Grass Step 2	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foley\FS_Mixer\Footsteps\Footsteps_Grass\Happy_Grass Step 2		66368
+	395700950	Happy_Grass Step 3	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foley\FS_Mixer\Footsteps\Footsteps_Grass\Happy_Grass Step 3		66368
+	495475995	Happy_Grass Step 5	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step 5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foley\FS_Mixer\Footsteps\Footsteps_Grass\Happy_Grass Step 5		66368
+	702333855	Happy_Grass Step	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Happy_Grass Step_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foley\FS_Mixer\Footsteps\Footsteps_Grass\Happy_Grass Step		66368
 

@@ -5,13 +5,9 @@
 			<ChildrenList>
 				<Sound Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" ShortID="707335291" Type="SoundFX">
 					<PropertyList>
-						<Property Name="DivergenceCenter" Type="int32">
-							<ValueList>
-								<Value>47</Value>
-							</ValueList>
-						</Property>
-						<Property Name="EnablePanner" Type="bool" Value="True"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Spatialization" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -19,6 +15,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Test_Piano" ID="{FC7239B3-525A-43B1-ADFF-32C28B9BC8AE}" WorkUnitID="{26C60B11-89B1-45ED-8A88-0EB1A81551D8}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
 						</Reference>

@@ -52,6 +52,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Play" ID="{6FBD1C4F-B1BC-4F15-9767-05AC87B1BA16}" ShortID="938344786" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{421474CD-EA09-4970-81EC-8A0002254B39}" Global="false">
+									<ObjectRef Name="Drips" ID="{A3E443B1-47CB-4C2D-81D6-763EC35AA98D}" WorkUnitID="{B612DEF9-F4CB-400D-A192-1786F696FDB3}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Crab_Walk_Play" ID="{829E38D5-74F6-42C7-AEE8-D131E0ECEB9A}">

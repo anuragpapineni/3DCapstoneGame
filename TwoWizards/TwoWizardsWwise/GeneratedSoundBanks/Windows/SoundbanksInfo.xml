@@ -19,9 +19,29 @@
 				<Event Id="1591070600" Name="Play_Cave_Ambiance" ObjectPath="\Events\Default Work Unit\Play_Cave_Ambiance"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="71612166" Language="SFX">
+					<ShortName>Cavern.wav</ShortName>
+					<Path>Plugins\iZotope Hybrid Reverb\Cavern_BB3D16FD.wem</Path>
+				</File>
 				<File Id="421895758" Language="SFX">
 					<ShortName>26910__thedapperdan__sewer-drain.wav</ShortName>
 					<Path>SFX\26910__thedapperdan__sewer-drain_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="518413872" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_C02EE1A4.wem</Path>
+				</File>
+				<File Id="729849911" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_AAEE85FE.wem</Path>
+				</File>
+				<File Id="803801945" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_333B64ED.wem</Path>
+				</File>
+				<File Id="942930032" Language="SFX">
+					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
+					<Path>SFX\351623__reiyamanor__water-drops_6C6A655C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

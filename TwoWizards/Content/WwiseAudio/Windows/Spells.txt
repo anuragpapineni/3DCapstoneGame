@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1286903804	Fireball_Hit			\Default Work Unit\Fireball_Hit	
+	4229250388	Fireball_Cast			\Default Work Unit\Fireball_Cast	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	149410777	Fireball_Cast	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Fireball_Cast_9E69E797.wem		\Actor-Mixer Hierarchy\Spells\Fire\Fireball_Cast		196828
+	481447631	Fireball_Hit	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Fireball_Hit_9E69E797.wem		\Actor-Mixer Hierarchy\Spells\Fire\Fireball_Hit		453696
+

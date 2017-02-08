@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1604129848	Play_Test_Piano			\Default Work Unit\Play_Test_Piano	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	597888100	Test Piano	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\SFX_Audio 4-St_B9448E36.wem		\Actor-Mixer Hierarchy\Default Work Unit\Soundtrack\Test Piano		24964848
+	597888100	Test Piano	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\SFX_Audio 4-St_B9448E36.wem		\Actor-Mixer Hierarchy\Soundtrack\Test Piano		24964848
 
