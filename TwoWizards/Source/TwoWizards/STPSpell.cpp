@@ -51,6 +51,7 @@ void ASTPSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 void ASTPSpell::BeginPlay() {
 	Super::BeginPlay();
 	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATwoWizardsCharacter::StaticClass(), FoundActors);
 	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
 	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
 }

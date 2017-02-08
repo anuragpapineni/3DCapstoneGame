@@ -57,7 +57,13 @@ void AExplodingSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 }
 
 
-
+void AExplodingSpell::BeginPlay() {
+	Super::BeginPlay();
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATwoWizardsCharacter::StaticClass(), FoundActors);
+	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
+	CollisionComp->MoveIgnoreActors.Add(FoundActors.Pop());
+}
 
 
 
