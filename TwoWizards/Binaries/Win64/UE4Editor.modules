@@ -1,0 +1,9 @@
+{
+	"Changelist" : 3249277,
+	"CompatibleChangelist" : 3195953,
+	"BuildId" : "b1034f7b-88d7-444e-8690-db29f22f6301",
+	"Modules" : 
+	{
+		"TwoWizards" : "UE4Editor-TwoWizards-560.dll"
+	}
+}

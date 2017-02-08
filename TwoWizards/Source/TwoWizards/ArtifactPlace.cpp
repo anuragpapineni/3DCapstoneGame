@@ -19,7 +19,7 @@ AArtifactPlace::AArtifactPlace()
 	RootComponent = TBox;
 
 	TBoxMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box Mesh"));
-	TBoxMesh->AttachTo(RootComponent);
+	TBoxMesh->AttachTo(RootComponent); //Look into AttachRootComponentTo
 }
 
 // Called when the game starts or when spawned
@@ -55,11 +55,13 @@ void AArtifactPlace::PutDown()
 	AArtifact* artifact;
 
 	//playerController->GetAttachedActors;
+
 	TArray<AActor*> playerChildren = playerController->Children;
-	TArray<AActor*> playerAttached = playerController->GetAttachedActors;
+	TArray<AActor*> test;
+	playerController->GetAttachedActors(test);
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size of playerChildren is %f"), playerChildren.Num() ));
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size attached list is %f"), playerAttached.Num() ));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size attached list is %f"), test.Num() ));
 
 	if (playerChildren.Num() > 0)
 	{
