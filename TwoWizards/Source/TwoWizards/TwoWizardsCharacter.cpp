@@ -59,6 +59,7 @@ ATwoWizardsCharacter::ATwoWizardsCharacter()
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
 
     health = 10;
+
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
 	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
 
@@ -80,13 +81,12 @@ void ATwoWizardsCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
-	if (GetNetMode() == NM_Client) {
-		AGameController::instance->player2 = this;
+	if (GetNetMode() != NM_Client) {
+		if (AGameController::instance->player1)
+			AGameController::instance->player2 = this;
+		else
+			AGameController::instance->player1 = this;
 	}
-	else {
-		AGameController::instance->player1 = this;
-	}
-
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));

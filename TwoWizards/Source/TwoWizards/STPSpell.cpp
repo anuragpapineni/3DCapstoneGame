@@ -12,11 +12,9 @@ ASTPSpell::ASTPSpell()
 	((USphereComponent*)CollisionComp)->InitSphereRadius(5.0f);
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
 	CollisionComp->OnComponentHit.AddDynamic(this, &ASTPSpell::OnHit);		// set up a notification for when this component hits something blocking
-
 																								// Players can't walk on it
 	CollisionComp->SetWalkableSlopeOverride(FWalkableSlopeOverride(WalkableSlope_Unwalkable, 0.f));
 	CollisionComp->CanCharacterStepUpOn = ECB_No;
-
 	// Set as root component
 	RootComponent = CollisionComp;
 
@@ -32,16 +30,13 @@ ASTPSpell::ASTPSpell()
 }
 
 
+
 void ASTPSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 
 	if (OtherActor->IsA(AEnemy::StaticClass()))
 	{
 		AEnemy* enemy = ((AEnemy*)OtherActor);
-		if (enemy->lastElement != 0 && (element - 1 == enemy->lastElement || (element == Element::Type::Fire&&enemy->lastElement == Element::Type::Earth)))
-			enemy->health -= 2;
-		else
-    
 		enemy->health -= damage;
 		enemy->lastElement = element;
 		if (((AEnemy*)OtherActor)->health <= 0)
@@ -52,7 +47,8 @@ void ASTPSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 	Destroy();
 }
 
-
-
-
-
+void ASTPSpell::BeginPlay() {
+	Super::BeginPlay();
+	CollisionComp->MoveIgnoreActors.Add(AGameController::instance->player1);
+	CollisionComp->MoveIgnoreActors.Add(AGameController::instance->player2);
+}

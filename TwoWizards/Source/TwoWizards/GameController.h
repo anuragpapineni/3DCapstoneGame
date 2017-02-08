@@ -25,6 +25,7 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ATwoWizardsCharacter* player1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ATwoWizardsCharacter* player2;
 
 	std::vector<AEnemy*> enemies;
