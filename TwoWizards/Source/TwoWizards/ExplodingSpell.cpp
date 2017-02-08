@@ -12,6 +12,7 @@ AExplodingSpell::AExplodingSpell()
 	// Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
 	((USphereComponent*)CollisionComp)->InitSphereRadius(5.0f);
+
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
 	CollisionComp->OnComponentHit.AddDynamic(this, &AExplodingSpell::OnHit);		// set up a notification for when this component hits something blocking
 
@@ -30,6 +31,8 @@ AExplodingSpell::AExplodingSpell()
 	ProjectileMovement->bRotationFollowsVelocity = true;
 	ProjectileMovement->bShouldBounce = false;
 	ProjectileMovement->ProjectileGravityScale = 0.0f;
+	
+	InitialLifeSpan = 0.8f;
 
 }
 
@@ -68,6 +71,9 @@ void AExplodingSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 	Destroy();
 }
 
+void AExplodingSpell::Tick(float DeltaTime) {
+	Super::Tick(DeltaTime);
+}
 
 void AExplodingSpell::BeginPlay() {
 	Super::BeginPlay();
@@ -78,5 +84,25 @@ void AExplodingSpell::BeginPlay() {
 }
 
 
+void AExplodingSpell::LifeSpanExpired() {
+	if (ExplosionClass != NULL)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			const FRotator SpawnRotation = this->GetActorRotation();
+			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+			const FVector SpawnLocation = GetActorLocation();
 
+			//Set Spawn Collision Handling Override
+			FActorSpawnParameters ActorSpawnParams;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+			// spawn the projectile at the muzzle
+			World->SpawnActor<AExplosion>(ExplosionClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+
+		}
+	}
+	Super::LifeSpanExpired();
+}
 

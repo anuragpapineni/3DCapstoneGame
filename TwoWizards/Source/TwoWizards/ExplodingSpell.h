@@ -30,12 +30,15 @@ class TWOWIZARDS_API AExplodingSpell : public ASpell
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	virtual void Tick(float DeltaTime) override;
+
 	/** Projectile class to spawn */
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AExplosion> ExplosionClass;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	
+
+	virtual void LifeSpanExpired() override;
 	
 	
 };
