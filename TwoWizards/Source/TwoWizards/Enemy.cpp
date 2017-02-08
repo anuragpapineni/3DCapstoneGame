@@ -4,6 +4,7 @@
 #include "TwoWizards.h"
 #include "Enemy.h"
 #include "GameController.h"
+#include "UnrealNetwork.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -27,7 +28,8 @@ AEnemy::AEnemy()
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-    AGameController::instance->enemies.push_back(this);
+	if (!AGameController::instance->enemies.Contains(this))
+		AGameController::instance->enemies.Add(this);
 	
 }
 
@@ -35,8 +37,9 @@ void AEnemy::BeginPlay()
 void AEnemy::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
+	if (health <= 0)
+		AGameController::DisableActor(this);
 	EnemyTick();
-
 }
 
 // Called to bind functionality to input
@@ -46,3 +49,11 @@ void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void AEnemy::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	// Replicate to everyone
+	DOREPLIFETIME(AEnemy, health);
+	DOREPLIFETIME(AEnemy, maxHealth);
+}

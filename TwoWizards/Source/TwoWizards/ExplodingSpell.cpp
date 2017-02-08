@@ -37,23 +37,35 @@ AExplodingSpell::AExplodingSpell()
 void AExplodingSpell::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 
-	if (OtherActor->IsA(AEnemy::StaticClass()))
+	//if (OtherActor->IsA(AEnemy::StaticClass()))
+	//{
+	//	AEnemy* enemy = ((AEnemy*)OtherActor);
+	//	enemy->health -= damage;
+	//	enemy->lastElement = element;
+	//	if (((AEnemy*)OtherActor)->health <= 0)
+	//	{
+	//		AGameController::DisableActor(OtherActor);
+	//	}
+	//}
+	if (ExplosionClass != NULL)
 	{
-		AEnemy* enemy = ((AEnemy*)OtherActor);
-		enemy->health -= damage;
-		enemy->lastElement = element;
-		if (((AEnemy*)OtherActor)->health <= 0)
+		UWorld* const World = GetWorld();
+		if (World != NULL)
 		{
-			AGameController::DisableActor(OtherActor);
+			const FRotator SpawnRotation = this->GetActorRotation();
+			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+			const FVector SpawnLocation = Hit.Location;
+
+			//Set Spawn Collision Handling Override
+			FActorSpawnParameters ActorSpawnParams;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+			// spawn the projectile at the muzzle
+			World->SpawnActor<AExplosion>(ExplosionClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+
 		}
 	}
-	if (OtherActor->IsA(ATwoWizardsCharacter::StaticClass())) {
-		CollisionComp->MoveIgnoreActors.Add(OtherActor);
-		CollisionComp->MoveIgnoreActors.Add(OtherActor);
-	}
-	else {
-		Destroy();
-	}
+	Destroy();
 }
 
 

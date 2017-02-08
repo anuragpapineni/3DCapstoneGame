@@ -2,6 +2,7 @@
 
 #include "TwoWizards.h"
 #include "GameController.h"
+#include "UnrealNetwork.h"
 
 AGameController* AGameController::instance = nullptr;
 
@@ -43,3 +44,10 @@ void AGameController::Tick( float DeltaTime )
 	Super::Tick( DeltaTime );
 }
 
+void AGameController::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	// Replicate to everyone
+	DOREPLIFETIME(AGameController, enemies);
+}

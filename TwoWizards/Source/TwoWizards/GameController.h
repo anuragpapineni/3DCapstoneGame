@@ -28,7 +28,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ATwoWizardsCharacter* player2;
 
-	std::vector<AEnemy*> enemies;
+
+	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
+	TArray<AEnemy*> enemies;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

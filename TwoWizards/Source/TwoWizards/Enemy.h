@@ -29,10 +29,10 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
         TEnumAsByte<Element::Type> lastElement;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
+    UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
         float health;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
+    UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite) //Not sure if this is necessary?
         float maxHealth;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = CPPTick)

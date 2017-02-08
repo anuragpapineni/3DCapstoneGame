@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Spell.h"
+#include "Explosion.h"
 #include "ExplodingSpell.generated.h"
 
 /**
@@ -15,10 +16,12 @@ class TWOWIZARDS_API AExplodingSpell : public ASpell
 
 	AExplodingSpell();
 
+	UPROPERTY(EditAnywhere)
+		float range;
+
 	/** Sphere collision component */
 	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
-		class UShapeComponent* CollisionComp;
-
+		class USphereComponent* CollisionComp;
 	/** Projectile movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 		class UProjectileMovementComponent* ProjectileMovement;
@@ -27,6 +30,9 @@ class TWOWIZARDS_API AExplodingSpell : public ASpell
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	/** Projectile class to spawn */
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AExplosion> ExplosionClass;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
