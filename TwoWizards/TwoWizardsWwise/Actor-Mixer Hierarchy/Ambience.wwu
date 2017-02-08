@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B612DEF9-F4CB-400D-A192-1786F696FDB3}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Ambience" ID="{B612DEF9-F4CB-400D-A192-1786F696FDB3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Intro" ID="{DBAFDB73-462D-4813-A742-372885FF2048}" ShortID="291900047">
+					<ChildrenList>
+						<ActorMixer Name="Intro_Ambiance_SFX" ID="{79BE5C40-9FE4-4AC6-864E-C1F7C8F0E905}" ShortID="1049204714">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Intro_Blend_Ambiance" ID="{870A1E1E-5009-46BE-A436-582F2720F9E5}" ShortID="752964953">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Cave" ID="{07D6AE80-E60F-4193-9C1A-7E904336F3EC}" ShortID="520322179">
+					<ChildrenList>
+						<ActorMixer Name="Cave_Ambience_SFX" ID="{8742E604-A51C-4335-B4FC-EDC37C0CF38C}" ShortID="554541881">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cave Wind" ID="{73211C36-6743-4971-92BE-D2397C7E3F39}" ShortID="902584030" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="SoundSeed Wind" ID="{E3AB0394-12C6-4F2A-939F-562FAA856C7A}" ShortID="699101212" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+											<PropertyList>
+												<Property Name="AttenuationRollOff" Type="Real32" Value="1.2"/>
+												<Property Name="AverageVelocity" Type="Real32" Value="-1390"/>
+												<Property Name="Direction" Type="Real32" Value="-25"/>
+												<Property Name="Duration" Type="Real64" Value="16.8"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="-0.72"/>
+												<Property Name="FrequencyScaleAutomate" Type="bool" Value="True"/>
+												<Property Name="Gustiness" Type="Real32" Value="0.08"/>
+												<Property Name="MaxDistance" Type="Real32" Value="7"/>
+												<Property Name="MinDistance" Type="Real32" Value="3.3"/>
+												<Property Name="Variability" Type="Real32" Value="0.07"/>
+												<Property Name="VelocityDynamicRange" Type="Real32" Value="0.41"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="FrequencyScale">
+			<Curve Name="" ID="{8669F80F-F208-4863-A3B8-FA1ED62363DA}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>1.84586</XPos>
+						<YPos>0.19753</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>4.2535</XPos>
+						<YPos>-0.17284</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>5.93885</XPos>
+						<YPos>0.09877</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>8.53376</XPos>
+						<YPos>-0.19753</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>11.26242</XPos>
+						<YPos>0.12346</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>15.59618</XPos>
+						<YPos>0.32099</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>16.8</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{4CB7C9F6-FFBC-435F-8FE5-0A9D50C19482}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="PanX" Type="Real64" Value="-89.7959183673469"/>
+															<Property Name="PanY" Type="Real64" Value="72.8813559322034"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{D31FCA08-7629-4534-A2A7-74F82014D9BF}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="PanX" Type="Real64" Value="93.3673469387755"/>
+															<Property Name="PanY" Type="Real64" Value="70.9443099273608"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{0ADA62F8-DECF-4CA2-AC76-ECC8C6BF5EE6}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="PanX" Type="Real64" Value="-97.4489795918367"/>
+															<Property Name="PanY" Type="Real64" Value="-64.1646489104116"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{38FF15CC-7AA8-42B3-B0B1-F85E0F8FE1DF}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="PanX" Type="Real64" Value="96.9387755102041"/>
+															<Property Name="PanY" Type="Real64" Value="-62.227602905569"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SoundSeed Wind" ID="{E3AB0394-12C6-4F2A-939F-562FAA856C7A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cave Drips" ID="{C90A3A84-5CA6-40F3-9DB3-B68C790DA03F}" ShortID="255927649" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>43</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-30</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="26910__thedapperdan__sewer-drain" ID="{CAE85846-3F80-4E24-B199-0639B0BDB92D}" ShortID="421895758">
+											<Language>SFX</Language>
+											<AudioFile>26910__thedapperdan__sewer-drain.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="26910__thedapperdan__sewer-drain" ID="{CAE85846-3F80-4E24-B199-0639B0BDB92D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Drips" ID="{A3E443B1-47CB-4C2D-81D6-763EC35AA98D}" ShortID="4675011">
+									<PropertyList>
+										<Property Name="EnablePanner" Type="bool" Value="True"/>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3AB6399D-6DAA-455D-A6C1-DB6AF37003AF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="63"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9BE61F91-5DE8-48DF-9626-C64266D16B77}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="33"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{675C87B9-A345-45BB-AE9E-A4E80C259632}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-1000"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="351623__reiyamanor__water-drops" ID="{A8710BF8-56EE-472D-B057-CDBC1D555C2E}" ShortID="299647201" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="351623__reiyamanor__water-drops" ID="{1BC3A36A-3B20-4B53-8599-5E6B053E1027}" ShortID="518413872">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.129860975429248"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.333121632622853"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>351623__reiyamanor__water-drops.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="351623__reiyamanor__water-drops" ID="{1BC3A36A-3B20-4B53-8599-5E6B053E1027}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="351623__reiyamanor__water-drops_01" ID="{49AE460C-3464-4404-8D38-296CAEE84012}" ShortID="1070407250" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="351623__reiyamanor__water-drops" ID="{8BD176DB-F583-4AF7-B686-9CB330515655}" ShortID="803801945">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.02131431320308"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.86823371817643"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>351623__reiyamanor__water-drops.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="351623__reiyamanor__water-drops" ID="{8BD176DB-F583-4AF7-B686-9CB330515655}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="351623__reiyamanor__water-drops_02" ID="{9FEDBDC2-172B-4C64-965D-0428F9C0696B}" ShortID="19356070" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="351623__reiyamanor__water-drops" ID="{0E5CFF6B-EC9C-4F2B-AA6D-37D1395E4958}" ShortID="729849911">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.31427793812907"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.67563021758437"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>351623__reiyamanor__water-drops.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="351623__reiyamanor__water-drops" ID="{0E5CFF6B-EC9C-4F2B-AA6D-37D1395E4958}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="351623__reiyamanor__water-drops_03" ID="{AD1F3FB5-FDC6-482F-86D1-C18537265F65}" ShortID="215354197" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="351623__reiyamanor__water-drops" ID="{C1155A85-699C-4C61-955A-FB179C901359}" ShortID="942930032">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="9.03380698638248E-02"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.20636637803434"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.57901091622262"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>351623__reiyamanor__water-drops.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="351623__reiyamanor__water-drops" ID="{C1155A85-699C-4C61-955A-FB179C901359}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{DA8AE21F-6B9F-4CEB-BA2D-3DE04E93F16D}">
+											<PropertyList>
+												<Property Name="PanX" Type="Real64" Value="-0.30030030030026"/>
+												<Property Name="PanY" Type="Real64" Value="0.158478605388262"/>
+											</PropertyList>
+										</Panner>
+									</PositioningInfo>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

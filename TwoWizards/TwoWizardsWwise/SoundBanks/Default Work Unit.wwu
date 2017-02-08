@@ -5,20 +5,37 @@
 			<ChildrenList>
 				<SoundBank Name="Footsteps" ID="{8F404320-5518-44E9-9CBC-127D827D57BC}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Evt_Footsteps" ID="{C0942A1D-E280-4E6D-B44B-9965D531DAD9}" WorkUnitID="{53C031A8-D5B6-4F06-BB1A-D8D8169BDC64}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footstep_Player" ID="{C0942A1D-E280-4E6D-B44B-9965D531DAD9}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Spells" ID="{C7779BBD-CB60-438A-B361-1247C13BEE36}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Spell_Emitter" ID="{7387C8A3-6DD8-4BBC-AF2B-4188F0F0F851}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Fireball_Cast" ID="{DA99DE0B-B625-483E-917E-8BE38E384E3C}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Fireball_Hit" ID="{F27EC880-EF7F-48BD-B0E5-7D444F078806}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Soundtrack" ID="{C94B956B-9FD5-4C28-A794-6BF99CC05758}">
 					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Ambience" ID="{CCFF042E-D5C9-4F00-B424-B17AB0518BD6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Cave_Ambiance" ID="{039B1A83-1A96-4DD0-AD02-3AD35F8880AC}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Mobs" ID="{A4A452DF-0943-4646-AA23-8BA85756A092}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Crab_Death" ID="{3CE38389-852A-4261-8C5F-BBB12D061626}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Crab_Walk_Play" ID="{829E38D5-74F6-42C7-AEE8-D131E0ECEB9A}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Crab_Walk_Stop" ID="{7DA91BC9-09B3-49AD-B17C-369E1502CDA2}" WorkUnitID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

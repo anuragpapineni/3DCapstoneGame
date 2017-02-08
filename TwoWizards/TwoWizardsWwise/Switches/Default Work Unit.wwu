@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A1AC14A0-4DF5-42AE-B9C1-C8814634F5A3}" SchemaVersion="72">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{A1AC14A0-4DF5-42AE-B9C1-C8814634F5A3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A1AC14A0-4DF5-42AE-B9C1-C8814634F5A3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Material" ID="{8BF66FC3-47D3-4497-9039-A17B49B16075}">
+					<ChildrenList>
+						<Switch Name="Ice" ID="{F0F69C1C-F0C2-455C-BE78-972257C251CF}"/>
+						<Switch Name="Rock" ID="{0D2A582E-7284-4FFD-A833-CB67446D2266}"/>
+						<Switch Name="Stone" ID="{D301C067-B043-488C-9816-480ACD19A95C}"/>
+						<Switch Name="Water" ID="{7C79F34F-0900-4F92-9B49-F7661ADF0C2E}"/>
+						<Switch Name="Grass" ID="{0EC24E3C-3256-4627-BABE-80B3F02F90C5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

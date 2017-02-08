@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Folder Name="Crab" ID="{805FAF92-AF00-4BAF-AB83-1B1523CD7E46}" ShortID="1025198861">
 					<ChildrenList>
-						<RandomSequenceContainer Name="Footsteps" ID="{D1591BCD-74B8-4258-92D6-93B6A7B9E78D}" ShortID="14588699">
+						<RandomSequenceContainer Name="Scuttle_Crab" ID="{D1591BCD-74B8-4258-92D6-93B6A7B9E78D}" ShortID="14588699">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
@@ -14,6 +14,30 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Crab_Walk" ID="{B744E6A8-4B15-41CD-B804-0D0A12C4DDC2}" ShortID="650974482" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Crab_Walk" ID="{9E1349B7-2FEA-428A-81C4-11539FC998CF}" ShortID="655047897">
+											<Language>SFX</Language>
+											<AudioFile>Crab_Walk.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Crab_Walk" ID="{9E1349B7-2FEA-428A-81C4-11539FC998CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Attack" ID="{8EA4B38F-B148-47AC-972D-BF2908E121A4}" ShortID="350664725">
 							<ReferenceList>
@@ -25,7 +49,26 @@
 								</Reference>
 							</ReferenceList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Voice" ID="{6D8BF202-F754-4241-A51D-A574248FF31E}" ShortID="516427477">
+						<RandomSequenceContainer Name="Death" ID="{6D8BF202-F754-4241-A51D-A574248FF31E}" ShortID="516427477">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-30</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E2F034B1-7134-4E7D-AA69-708E9F874622}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
@@ -34,6 +77,65 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Crab_Death_2" ID="{A917A526-A6ED-4929-951D-168EA3875D4D}" ShortID="792569945" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Crab_Death_2" ID="{987639F3-910B-4F37-8576-F987A93A7CFC}" ShortID="482486395">
+											<Language>SFX</Language>
+											<AudioFile>Crab_Death_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Crab_Death_2" ID="{987639F3-910B-4F37-8576-F987A93A7CFC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Crab_Death_1" ID="{3D0B76CC-306F-48B6-93F2-3C5DA9EFB42C}" ShortID="242940063" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Crab_Death_1" ID="{4546FDA2-31CE-49CD-8FE1-797FFE343B20}" ShortID="880060409">
+											<Language>SFX</Language>
+											<AudioFile>Crab_Death_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Crab_Death_1" ID="{4546FDA2-31CE-49CD-8FE1-797FFE343B20}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Crab_Death_3" ID="{4CCE7A1F-F5B7-48B4-9687-319561255669}" ShortID="339141807" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BA047236-EC83-4E5C-A963-46BB30A2BE4E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11F1F59A-CCA8-4463-9FEC-F996629F7A29}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Crab_Death_3" ID="{437D39D3-2471-4380-A71F-4316EB59A130}" ShortID="431391950">
+											<Language>SFX</Language>
+											<AudioFile>Crab_Death_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Crab_Death_3" ID="{437D39D3-2471-4380-A71F-4316EB59A130}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<ActorMixer Name="New Actor-Mixer" ID="{CAD5D3B5-6500-4181-B1A2-B2C0BFC7E247}" ShortID="814337666">
 							<ReferenceList>

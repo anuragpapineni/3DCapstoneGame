@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1591070600	Play_Cave_Ambiance			\Default Work Unit\Play_Cave_Ambiance	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	699101212	SoundSeed Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Cave Wind\SoundSeed Wind	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	421895758	Cave Drips	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Mac\SFX\26910__thedapperdan__sewer-drain_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Cave Drips		16437312
+

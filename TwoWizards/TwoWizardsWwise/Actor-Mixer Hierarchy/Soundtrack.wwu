@@ -5,10 +5,16 @@
 			<ChildrenList>
 				<Sound Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" ShortID="707335291" Type="SoundFX">
 					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>47</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnablePanner" Type="bool" Value="True"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>2</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -34,12 +40,8 @@
 						</AudioFileSource>
 					</ChildrenList>
 					<PositioningInfo>
-						<Panner Name="" ID="{4D4B33AA-7FA1-42FA-A0B9-5AA76E50972E}">
-							<PropertyList>
-								<Property Name="PanX" Type="Real64" Value="-0.599700149925047"/>
-								<Property Name="PanY" Type="Real64" Value="-0.316455696202531"/>
-							</PropertyList>
-						</Panner>
+						<Panner Name="" ID="{4D4B33AA-7FA1-42FA-A0B9-5AA76E50972E}"/>
+						<Position Name="" ID="{8F1C366B-9585-4FD6-9D50-4F7657413BAB}"/>
 					</PositioningInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="SFX_Audio 4-St" ID="{53FADB35-51FD-4C2E-9CC7-710848DFC086}" Platform="Linked"/>

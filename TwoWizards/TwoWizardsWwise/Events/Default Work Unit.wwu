@@ -3,30 +3,107 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{6149D65A-24D7-490B-88E8-FCF7E61955E1}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Spell_Emitter" ID="{7387C8A3-6DD8-4BBC-AF2B-4188F0F0F851}">
+				<Event Name="Play_Test_Piano" ID="{A9770C6A-E8A3-4876-8AC0-4C08EEE4EC34}">
 					<ChildrenList>
-						<Action Name="Play" ID="{4998DD11-05B1-4F9E-9A0E-4A1563127B5C}" ShortID="371459400" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{42E6985B-CC46-4002-8ED9-07BB59DCF4A5}" ShortID="781827374" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
-								<Element ID="{81D46FD8-EAC2-49C1-BE53-A958BE68558E}" Global="false">
-									<ObjectRef Name="Spell_Emitter" ID="{11200095-8F19-4D51-BFBA-EC3FEF5C1E02}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Stop" ID="{81971F5D-0762-4078-AACB-FED1963EAAAA}" ShortID="117627232" Type="Stop" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{3F9ED3E5-28A6-4F23-BE32-1DFE8166BC23}" Global="false">
-									<ObjectRef Name="Spell_Emitter" ID="{11200095-8F19-4D51-BFBA-EC3FEF5C1E02}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
+								<Element ID="{5D149D99-ACA1-46F3-8B23-1976680AA48B}" Global="false">
+									<ObjectRef Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" WorkUnitID="{1A347844-2745-43C7-BE8A-91D9F6C6BF51}"/>
 								</Element>
 							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Test_Piano" ID="{A9770C6A-E8A3-4876-8AC0-4C08EEE4EC34}">
+				<Event Name="Footstep_Player" ID="{C0942A1D-E280-4E6D-B44B-9965D531DAD9}">
 					<ChildrenList>
-						<Action Name="Play" ID="{42E6985B-CC46-4002-8ED9-07BB59DCF4A5}" ShortID="781827374" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{3217E231-5127-4CB9-8171-DB44F35994A5}" ShortID="411896886" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{5D149D99-ACA1-46F3-8B23-1976680AA48B}" Global="false">
-									<ObjectRef Name="Test Piano" ID="{E75482C0-9197-47FA-BA33-01E10EFA722F}" WorkUnitID="{1A347844-2745-43C7-BE8A-91D9F6C6BF51}"/>
+								<Element ID="{D157E34C-5983-4446-A44B-285DC7F1B0F6}" Global="false">
+									<ObjectRef Name="Footsteps" ID="{F88CDCA4-A2CC-4ABA-B8A2-531D0BFE9969}" WorkUnitID="{96719D06-C70C-4C0E-A6E0-8933DEB5F855}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{5863F1E6-2222-4224-833A-06AE1241FEFD}" ShortID="759007891" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{FDD896FC-5384-4B9C-B627-5A0A9582EDD6}" Global="false">
+									<ObjectRef Name="Cloth" ID="{1DE97514-B879-4776-94DD-2D61EF0A16E7}" WorkUnitID="{96719D06-C70C-4C0E-A6E0-8933DEB5F855}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cave_Ambiance" ID="{039B1A83-1A96-4DD0-AD02-3AD35F8880AC}">
+					<ChildrenList>
+						<Action Name="Play" ID="{353D671E-FCE4-4090-A122-FD805FC2287F}" ShortID="713461244" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{98FD1D85-FDC6-4EC3-B16E-DC9A4A342A1E}" Global="false">
+									<ObjectRef Name="Cave Wind" ID="{73211C36-6743-4971-92BE-D2397C7E3F39}" WorkUnitID="{B612DEF9-F4CB-400D-A192-1786F696FDB3}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{0A3E79E8-5123-4E8F-8CF8-4401312787D5}" ShortID="775181658" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{E4CF97FF-FBE3-475E-B217-88647BDA8714}" Global="false">
+									<ObjectRef Name="Cave Drips" ID="{C90A3A84-5CA6-40F3-9DB3-B68C790DA03F}" WorkUnitID="{B612DEF9-F4CB-400D-A192-1786F696FDB3}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crab_Walk_Play" ID="{829E38D5-74F6-42C7-AEE8-D131E0ECEB9A}">
+					<ChildrenList>
+						<Action Name="Play" ID="{FE505C63-15A7-48AD-95B2-8C8EAD2A949D}" ShortID="387585561" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{81812D3C-2133-4966-AAC0-F4AE2913CCB4}" Global="false">
+									<ObjectRef Name="Scuttle_Crab" ID="{D1591BCD-74B8-4258-92D6-93B6A7B9E78D}" WorkUnitID="{02FD5103-149B-4D49-8BAF-08558F4150EB}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crab_Walk_Stop" ID="{7DA91BC9-09B3-49AD-B17C-369E1502CDA2}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{9BA7B1BF-6793-498E-8539-A7882A7C1E0B}" ShortID="467229246" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0F45C2F4-F075-493B-890B-BE49DB55234F}" Global="false">
+									<ObjectRef Name="Scuttle_Crab" ID="{D1591BCD-74B8-4258-92D6-93B6A7B9E78D}" WorkUnitID="{02FD5103-149B-4D49-8BAF-08558F4150EB}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crab_Death" ID="{3CE38389-852A-4261-8C5F-BBB12D061626}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5BBE4DB6-0C00-44C3-AE75-C587D40D04B2}" ShortID="798879766" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{DE792273-1A2E-47D5-ABDE-1E15BC4B2602}" Global="false">
+									<ObjectRef Name="Death" ID="{6D8BF202-F754-4241-A51D-A574248FF31E}" WorkUnitID="{02FD5103-149B-4D49-8BAF-08558F4150EB}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fireball_Cast" ID="{DA99DE0B-B625-483E-917E-8BE38E384E3C}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5EFB7B71-5AA6-4B78-99AF-29D16A93F7E8}" ShortID="777838219" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{75B656D8-8F67-4308-B14E-C3F52D1860C5}" Global="false">
+									<ObjectRef Name="Fireball_Cast" ID="{F654BCDA-06E9-41D4-BD28-D776A48A29CC}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fireball_Hit" ID="{F27EC880-EF7F-48BD-B0E5-7D444F078806}">
+					<ChildrenList>
+						<Action Name="Play" ID="{CA9AE448-264E-41B0-A073-A4F827CDB763}" ShortID="37739760" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{4301524F-D959-432A-9004-EFCBEBDA2BF9}" Global="false">
+									<ObjectRef Name="Fireball_Hit" ID="{4315667F-C3E2-4E15-89D3-41DDEA840B80}" WorkUnitID="{40ABCF7A-CB6C-491E-B1D3-81B87962E8E2}"/>
 								</Element>
 							</ElementList>
 						</Action>
