@@ -53,11 +53,21 @@ void AArtifactPlace::PutDown()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Put Down Method called"));
 	AArtifact* artifact;
-	TArray<AActor*> playerChildren = playerController->Children; 
-	if (sizeof(playerChildren) > 0)
+
+	//playerController->GetAttachedActors;
+	TArray<AActor*> playerChildren = playerController->Children;
+	TArray<AActor*> playerAttached = playerController->GetAttachedActors;
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size of playerChildren is %f"), playerChildren.Num() ));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size attached list is %f"), playerAttached.Num() ));
+
+	if (playerChildren.Num() > 0)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("List is NOT empty"));
 	}
+
+	
+
 	for (auto childActor : playerChildren)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Checking child actors"));

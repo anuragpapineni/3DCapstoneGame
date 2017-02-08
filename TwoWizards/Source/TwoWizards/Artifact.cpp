@@ -46,6 +46,8 @@ void AArtifact::Pickup()
 {
 	playerController->hasArtifact = true;
 	this->AttachToActor(playerController, FAttachmentTransformRules::KeepRelativeTransform);
+	
+	//this->AttachToActor(playerController, FAttachmentTransformRules::KeepRelativeTransform, playerController->GetMesh()->GetSocketBoneName("thumb_03_l"));
 	//this->AttachRootComponentToActor(playerController);
 }
 
