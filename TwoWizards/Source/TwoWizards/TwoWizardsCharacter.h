@@ -4,6 +4,7 @@
 #include "TwoWizardsCharacter.generated.h"
 
 class UInputComponent;
+class AArtifact;
 
 UENUM()
 namespace ETaskEnum {
@@ -100,6 +101,7 @@ public:
 	bool hasArtifact = false;
 	bool bIsPickingUp = false;
 	bool bIsPuttingDown = false;
+	AArtifact* artifact = NULL;
 
 protected:
 	

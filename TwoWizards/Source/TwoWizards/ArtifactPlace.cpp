@@ -52,33 +52,15 @@ void AArtifactPlace::Tick( float DeltaTime )
 void AArtifactPlace::PutDown()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Put Down Method called"));
-	AArtifact* artifact;
+	AArtifact* artifact = playerController->artifact;
 
-	//playerController->GetAttachedActors;
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Artifact determined"));
 
-	TArray<AActor*> playerChildren = playerController->Children;
-	TArray<AActor*> test;
-	playerController->GetAttachedActors(test);
+	artifact->DetachFromActor(FDetachmentTransformRules::KeepRelativeTransform);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Artifact detached"));
+	artifact->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Artifact attached"));
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size of playerChildren is %f"), playerChildren.Num() ));
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Size attached list is %f"), test.Num() ));
-
-	if (playerChildren.Num() > 0)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("List is NOT empty"));
-	}
-
-	
-
-	for (auto childActor : playerChildren)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Checking child actors"));
-		if (childActor->IsA(AArtifact::StaticClass()))
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FOUND THE ARTIFACT"));
-			artifact = Cast<AArtifact>(childActor);
-		}
-	}
 	playerController->hasArtifact = false;
 }
 
