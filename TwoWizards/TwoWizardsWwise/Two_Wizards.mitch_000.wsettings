@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{DB98DB8A-2770-429E-B075-D23E83EBB2E2}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\mitch_000\Desktop\TwoWizards\SFX\Bounced Files"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\mitch_000\Downloads"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>

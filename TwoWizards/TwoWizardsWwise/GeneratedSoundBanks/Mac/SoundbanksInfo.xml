@@ -19,25 +19,45 @@
 				<Event Id="1591070600" Name="Play_Cave_Ambiance" ObjectPath="\Events\Default Work Unit\Play_Cave_Ambiance"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="120136644" Language="SFX">
+					<ShortName>Drip3.wav</ShortName>
+					<Path>SFX\Drip3_9E69E797.wem</Path>
+				</File>
+				<File Id="227340900" Language="SFX">
+					<ShortName>DripDrop4.wav</ShortName>
+					<Path>SFX\DripDrop4_F2FE19E2.wem</Path>
+				</File>
+				<File Id="236372029" Language="SFX">
+					<ShortName>DripDrop5.wav</ShortName>
+					<Path>SFX\DripDrop5_9E69E797.wem</Path>
+				</File>
+				<File Id="313720021" Language="SFX">
+					<ShortName>Drip1.wav</ShortName>
+					<Path>SFX\Drip1_9E69E797.wem</Path>
+				</File>
 				<File Id="421895758" Language="SFX">
 					<ShortName>26910__thedapperdan__sewer-drain.wav</ShortName>
 					<Path>SFX\26910__thedapperdan__sewer-drain_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="518413872" Language="SFX">
-					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
-					<Path>SFX\351623__reiyamanor__water-drops_C02EE1A4.wem</Path>
+				<File Id="649152522" Language="SFX">
+					<ShortName>DripDrop2.wav</ShortName>
+					<Path>SFX\DripDrop2_9E69E797.wem</Path>
 				</File>
-				<File Id="729849911" Language="SFX">
-					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
-					<Path>SFX\351623__reiyamanor__water-drops_AAEE85FE.wem</Path>
+				<File Id="734773253" Language="SFX">
+					<ShortName>DripDrop3.wav</ShortName>
+					<Path>SFX\DripDrop3_9E69E797.wem</Path>
 				</File>
-				<File Id="803801945" Language="SFX">
-					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
-					<Path>SFX\351623__reiyamanor__water-drops_333B64ED.wem</Path>
+				<File Id="751687395" Language="SFX">
+					<ShortName>DripDrop1.wav</ShortName>
+					<Path>SFX\DripDrop1_9E69E797.wem</Path>
 				</File>
-				<File Id="942930032" Language="SFX">
-					<ShortName>351623__reiyamanor__water-drops.wav</ShortName>
-					<Path>SFX\351623__reiyamanor__water-drops_6C6A655C.wem</Path>
+				<File Id="795727672" Language="SFX">
+					<ShortName>Drip2.wav</ShortName>
+					<Path>SFX\Drip2_9E69E797.wem</Path>
+				</File>
+				<File Id="1023457861" Language="SFX">
+					<ShortName>38963__argitoth__archi-soundscape-cavern3.wav</ShortName>
+					<Path>SFX\38963__argitoth__archi-soundscape-cavern3_4B8CC0C5.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

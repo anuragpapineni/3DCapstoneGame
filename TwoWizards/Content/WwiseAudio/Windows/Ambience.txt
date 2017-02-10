@@ -2,18 +2,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	1591070600	Play_Cave_Ambiance			\Default Work Unit\Play_Cave_Ambiance	
 
 Effect plug-ins	ID	Name	Type				Notes
-	3631438710	Cavern	iZotope Hybrid Reverb			
-
-Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	699101212	SoundSeed Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Cave Wind\SoundSeed Wind	
+	3164629247	Holy	Wwise RoomVerb			
+	3216246379	Space_Dreaming	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	120136644	Drip3	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Drip3_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\Drip3		131136
+	227340900	DripDrop4	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\DripDrop4_F2FE19E2.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\DripDrop4		49156
+	236372029	DripDrop5	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\DripDrop5_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\DripDrop5		111680
+	313720021	Drip1	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Drip1_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\Drip1		98880
 	421895758	Cave Drips	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\26910__thedapperdan__sewer-drain_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Cave Drips		16437312
-	518413872	351623__reiyamanor__water-drops	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\351623__reiyamanor__water-drops_C02EE1A4.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\351623__reiyamanor__water-drops		19578
-	729849911	351623__reiyamanor__water-drops_02	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\351623__reiyamanor__water-drops_AAEE85FE.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\351623__reiyamanor__water-drops_02		34754
-	803801945	351623__reiyamanor__water-drops_01	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\351623__reiyamanor__water-drops_333B64ED.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\351623__reiyamanor__water-drops_01		81368
-	942930032	351623__reiyamanor__water-drops_03	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\351623__reiyamanor__water-drops_6C6A655C.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\351623__reiyamanor__water-drops_03		35838
-
-Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
-	71612166	Cavern	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\Plugins\iZotope Hybrid Reverb\Cavern_BB3D16FD.wem	iZotope Hybrid Reverb (Shared)	\Effects\Factory iZotope Hybrid Reverb Effects\Cavern		58660
+	649152522	DripDrop2	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\DripDrop2_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\DripDrop2		72256
+	734773253	DripDrop3	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\DripDrop3_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\DripDrop3		103488
+	751687395	DripDrop1	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\DripDrop1_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\DripDrop1		81472
+	795727672	Drip2	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\Drip2_9E69E797.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Drips\Drip2		95296
+	1023457861	Cave Wind	C:\Users\mitch_000\Documents\Unreal Projects\3DCapstoneGame\TwoWizards\TwoWizardsWwise\.cache\Windows\SFX\38963__argitoth__archi-soundscape-cavern3_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Ambience\Cave\Cave_Ambience_SFX\Cave Wind		10512544
 
